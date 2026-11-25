@@ -18,7 +18,9 @@ def validate_rows(rows):
     for row in rows:
         if not isinstance(row, dict) or not isinstance(row.get("sku"), str) or not re.fullmatch(r"[0-9]{4}", row["sku"]):
             raise ValueError("Reference SKUs must be four-digit strings, including leading zeros.")
-        count = row.get("quantity")
+        if "quantity" not in row:
+            raise ValueError("Include quantity explicitly, using null for a blank.")
+        count = row["quantity"]
         if count is not None and (not isinstance(count, str) or not re.fullmatch(r"[0-9]{1,6}", count)):
             raise ValueError("Use a digit string for a count or null for a blank.")
 

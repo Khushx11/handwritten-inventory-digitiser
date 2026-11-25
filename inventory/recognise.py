@@ -106,8 +106,9 @@ def cell(image, box, expected=None, classifier=None, recover_touching=False, kno
     paths = [split_sequence(mask, expected, glyph, primary, known)
              for mask in (ink(crop, relaxed=True), enhanced_mask(crop))]
     candidates = [path for path in paths if path is not None and path[2] >= (0.15 if known else 0.45)]
-    if candidates:
-        _, proposal, minimum = max(candidates)
+    if len(candidates) == 2 and candidates[0][1] == candidates[1][1]:
+        _, proposal, _ = candidates[0]
+        minimum = min(path[2] for path in candidates)
         # Preserve the primary OCR and never present the hypothesis as an approved read.
         result["segmentation_suggestion"] = proposal
         result["segmentation_score"] = round(minimum, 5)

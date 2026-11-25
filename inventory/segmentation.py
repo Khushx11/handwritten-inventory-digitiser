@@ -2,6 +2,7 @@
 from math import log
 
 import numpy as np
+from PIL import Image
 from scipy import ndimage
 
 
@@ -20,6 +21,13 @@ def split_sequence(mask, length, features, classifier, known=None):
         return None
     cropped = mask[ys.min():ys.max()+1, xs.min():xs.max()+1]
     height, width = cropped.shape
+    if max(height, width) > 220:
+        scale = 220 / max(height, width)
+        reduced = Image.fromarray(cropped.astype("uint8") * 255).resize(
+            (max(1, round(width*scale)), max(1, round(height*scale))), Image.Resampling.BOX,
+        )
+        cropped = np.asarray(reduced) >= 85
+        height, width = cropped.shape
     pitch = width / length
     if height < 12 or not 3 <= pitch <= height * 1.1:
         return None
@@ -27,7 +35,7 @@ def split_sequence(mask, length, features, classifier, known=None):
     layers = [[0]]
     for i in range(1, length):
         centre = round(i * pitch)
-        radius = max(2, round(pitch * 0.24))
+        radius = min(15, max(2, round(pitch * 0.24)))
         layers.append(list(range(max(2, centre-radius), min(width-1, centre+radius+1))))
     layers.append([width])
     projection = cropped.sum(axis=0) / height

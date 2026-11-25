@@ -1,6 +1,7 @@
 """Exercise the complete browser review path against a running local app."""
 import argparse
 import csv
+import re
 from io import StringIO
 from pathlib import Path
 from time import sleep
@@ -24,7 +25,7 @@ def caption(page, text, seconds, record):
     sleep(seconds)
 
 
-def run(url, record):
+def run(url, record, check_touching=False):
     root = Path(__file__).resolve().parents[1]
     with sync_playwright() as runner:
         browser = runner.chromium.launch()
@@ -97,6 +98,14 @@ def run(url, record):
             page.get_by_label("Example condition").select_option("heavy-blur")
             page.get_by_role("button", name="Load labelled example").click()
             expect(page.get_by_text("Soft edges detected.", exact=False)).to_be_visible(timeout=20_000)
+        if check_touching:
+            page.get_by_label("Example condition").select_option("crowded")
+            page.get_by_role("button", name="Load labelled example").click()
+            suggestion = page.get_by_role("button", name=re.compile("touching-digit suggestion")).first
+            expect(suggestion).to_be_visible(timeout=20_000)
+            suggestion.click()
+            expect(page.get_by_text("Catalogue SKU suggested from touching digits", exact=False)).to_be_visible()
+            expect(page.get_by_label("SKU", exact=True)).to_have_value("")
         video = page.video
         context.close()
         if record and video:
@@ -108,5 +117,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8010")
     parser.add_argument("--record", type=Path)
+    parser.add_argument("--check-touching", action="store_true")
     cfg = parser.parse_args()
-    run(cfg.url, cfg.record)
+    run(cfg.url, cfg.record, cfg.check_touching)
