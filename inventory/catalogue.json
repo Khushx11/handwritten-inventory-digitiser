@@ -1,0 +1,13 @@
+{
+  "version": "stockroom-example-v1",
+  "items": {
+    "0012": "Cable clips",
+    "0017": "Terminal blocks",
+    "0074": "M6 washers",
+    "0108": "Panel brackets",
+    "0146": "Fuse holders",
+    "0217": "Cable sleeves",
+    "0412": "Lock nuts",
+    "0642": "Rubber grommets"
+  }
+}
