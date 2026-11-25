@@ -3,9 +3,11 @@ from scipy import ndimage
 from PIL import Image
 
 
-def ink(image):
+def ink(image, *, relaxed=False):
     grey = np.asarray(image.convert("L"))
     local = ndimage.uniform_filter(grey.astype(np.float32), size=35)
+    if relaxed:
+        return (grey < 236) & (grey < local - 11)
     return (grey < 166) & (grey < local - 18)
 
 
@@ -27,14 +29,14 @@ def deskew(image):
 
 
 def detect(image):
-    mask = ink(image)
-    x = line_centres(mask.sum(axis=0), image.height * 0.46)
-    y = line_centres(mask.sum(axis=1), image.width * 0.45)
-    if len(x) != 3 or not 4 <= len(y) <= 32:
-        raise ValueError("Could not locate a two-column ruled grid. Crop or straighten the page and retry.")
-    if min(np.diff(x)) < 24 or min(np.diff(y)) < 22:
-        raise ValueError("The detected grid has very narrow cells.")
-    return x, y
+    for relaxed in (False, True):
+        mask = ink(image, relaxed=relaxed)
+        x = line_centres(mask.sum(axis=0), image.height * 0.46)
+        y = line_centres(mask.sum(axis=1), image.width * 0.45)
+        if (len(x) == 3 and 4 <= len(y) <= 32
+                and min(np.diff(x)) >= 24 and min(np.diff(y)) >= 22):
+            return x, y
+    raise ValueError("Could not locate a two-column ruled grid. Crop or straighten the page and retry.")
 
 
 def cell_boxes(x, y):

@@ -77,7 +77,17 @@ def recognise(parts, *, width, expected=None, classifier=None):
 
 def cell(image, box, expected=None, classifier=None):
     crop = image.crop(box)
-    return recognise(components(ink(crop)), width=crop.width, expected=expected, classifier=classifier)
+    parts = components(ink(crop))
+    if parts:
+        return recognise(parts, width=crop.width, expected=expected, classifier=classifier)
+    faint = ink(crop, relaxed=True)
+    if faint.sum() < 18:
+        return {"raw": "", "confidence": 0.0, "state": "blank"}
+    recovered = recognise(components(faint), width=crop.width, expected=expected, classifier=classifier)
+    if recovered["state"] == "blank":
+        recovered["state"] = "unreadable"
+    recovered["confidence"] = min(recovered["confidence"], 0.5)
+    return recovered
 
 @lru_cache(maxsize=1)
 def printed_model():

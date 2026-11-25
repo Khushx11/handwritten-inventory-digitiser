@@ -16,9 +16,9 @@ def assess(image):
     warnings = []
     if contrast < 70:
         warnings.append("Low contrast. Check faint strokes against the source crop.")
-    if sharpness < 0.26:
+    if sharpness < 0.39:
         warnings.append("Soft edges detected. Consider retaking the photo in focus.")
-    if unevenness > 65:
+    if unevenness > 50:
         warnings.append("Uneven lighting detected. Check the darker cells or retake the photo.")
     if min(image.size) < 450:
         warnings.append("Small image. Use the original scan or a closer photo.")
