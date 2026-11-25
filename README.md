@@ -44,7 +44,7 @@ The optional MNIST and PenDigits model scored **97.46%** and **93.40%** on their
 
 ## Difficult scans
 
-Try **Blurred photo**, **Faint handwriting** or **Crowded digits** from the example selector. The app shows scan-quality warnings and flags faint recovered readings for review. An optional degradation-trained model improved exact rows in the paired blur tests. [Stress results and reproduction](docs/difficult-scans.md)
+Try **Blurred photo**, **Faint handwriting** or **Crowded digits** from the example selector. The app shows scan-quality warnings and flags faint recovered readings for review. An optional degradation-trained model improved exact rows in the paired blur tests. For difficult scans, enable the second-model check and conservative review policy. [Stress results and reproduction](docs/difficult-scans.md)
 
 ## Design
 

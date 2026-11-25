@@ -45,6 +45,11 @@ jobs:
             --extended-stress --output runtime/stress-standard-model.json
           python -m inventory.writer_benchmark runtime/uji-pen.zip --model runtime/handwriting-robust.npz \
             --extended-stress --output runtime/stress-augmented-model.json
+      - name: Check conservative routing with both models
+        run: |
+          python -m inventory.writer_benchmark runtime/uji-pen.zip \
+            --model runtime/handwriting-robust.npz --comparison-model runtime/handwriting-mlp.npz \
+            --extended-stress --gate-scan-quality --output runtime/stress-cross-checked-model.json
       - uses: actions/upload-artifact@v4
         with:
           name: additional-handwriting-metrics
@@ -54,3 +59,4 @@ jobs:
             runtime/robust-digit-metrics.json
             runtime/stress-standard-model.json
             runtime/stress-augmented-model.json
+            runtime/stress-cross-checked-model.json
