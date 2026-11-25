@@ -7,7 +7,7 @@ from scipy import ndimage
 from sklearn.datasets import load_digits
 from sklearn.neighbors import KNeighborsClassifier
 
-from .grid import ink
+from .grid import cell_boxes, detect, ink
 
 
 def glyph(mask):
@@ -15,7 +15,6 @@ def glyph(mask):
     if not len(x):
         return np.zeros(64)
     crop = Image.fromarray(np.asarray(mask[y.min():y.max()+1, x.min():x.max()+1] * 255, dtype=np.uint8))
-    crop.thumbnail((7, 8), Image.Resampling.LANCZOS)
     ratio = min(7 / crop.width, 8 / crop.height)
     crop = crop.resize((max(1, round(crop.width * ratio)), max(1, round(crop.height * ratio))), Image.Resampling.LANCZOS)
     canvas = Image.new("L", (8, 8))
@@ -28,7 +27,21 @@ def model():
     data = load_digits()
     features = [glyph(np.asarray(Image.fromarray((image * 15).astype("uint8")).resize((40, 40))) > 85)
                 for image in data.images]
-    return KNeighborsClassifier(n_neighbors=9, weights="distance").fit(features, data.target)
+    targets = list(data.target)
+    # Supplement handwritten digits with the two development stroke styles.
+    # Evaluation layouts and stroke styles are deliberately excluded.
+    from .fixtures import sheet
+    for style in (0, 1):
+        for seed in range(100, 120):
+            image, truth = sheet(seed, style, layout=0)
+            boxes, _ = cell_boxes(*detect(image))
+            for region, row in zip(boxes, truth["rows"]):
+                for box, text in zip(region, (row["sku"], row["quantity"])):
+                    parts = components(ink(image.crop(box)))
+                    if len(parts) == len(text):
+                        features.extend(glyph(part[-1]) for part in parts)
+                        targets.extend(int(value) for value in text)
+    return KNeighborsClassifier(n_neighbors=9, weights="distance", n_jobs=1).fit(features, targets)
 
 
 def components(mask):
