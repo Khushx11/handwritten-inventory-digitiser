@@ -88,3 +88,87 @@ async function processImage() {
     $('process').disabled = false;
   }
 }
+
+const base = () => `/api/sheets/${current.sheet}`;
+function display() {
+  const {report, reconciliation} = current;
+  $('workspace').hidden = false;
+  const source = base() + '/image';
+  if ($('sheet').getAttribute('src') !== source) $('sheet').src = source;
+  $('original').href = base() + '/original';
+  $('download-json').href = base() + '/json';
+  $('download-csv').href = base() + '/csv';
+  const {unresolved, approved_sum, stated_total, difference} = reconciliation;
+  const sum = stated_total === null ? 'Printed total unreadable or absent' : `Printed total ${stated_total}`;
+  const diff = difference === null ? '' : ` · Difference ${difference}`;
+  $('stats').textContent = `${unresolved} unresolved · Approved sum ${approved_sum} · ${sum}${diff}`;
+  $('history').replaceChildren(...report.history.map(event => {
+    const value = event.after ? `${event.after.sku}, ${event.after.quantity}` : 'unresolved';
+    return node('li', `Row ${event.row} · ${event.action} · ${value} · ${event.time}`);
+  }));
+  renderRows();
+  inspect();
+}
+function renderRows() {
+  const rows = current.report.rows.filter(row => !$('flagged').checked || (row.flags.length && !row.verified));
+  $('rows').replaceChildren(...rows.map(row => {
+    const button = node('button');
+    button.className = 'row-button';
+    button.setAttribute('aria-pressed', row.id === selected);
+    const value = row.verified || {sku: row.sku.raw || '—', quantity: row.count.raw || row.count.state};
+    button.append(node('strong', `Row ${row.id} · ${value.sku}`));
+    const state = node('span', `${value.quantity} · ${row.verified ? 'Approved' : row.flags.join(', ') || 'Needs approval'}`);
+    state.className = row.flags.length && !row.verified ? 'state flag' : 'state';
+    button.append(state);
+    button.addEventListener('click', () => {
+      selected = row.id;
+      for (const peer of $('rows').children) peer.setAttribute('aria-pressed', peer === button);
+      $('review-status').textContent = '';
+      inspect();
+    });
+    return button;
+  }));
+}
+function drawSources(row) {
+  const source = $('sheet');
+  $('overlay').replaceChildren();
+  $('crops').replaceChildren();
+  if (!row || !source.naturalWidth) return;
+  row.boxes.forEach(([left, top, right, bottom], index) => {
+    const width = right-left, height = bottom-top;
+    const mark = node('span');
+    mark.style.cssText = `left:${left/source.naturalWidth*100}%;top:${top/source.naturalHeight*100}%;width:${width/source.naturalWidth*100}%;height:${height/source.naturalHeight*100}%`;
+    $('overlay').append(mark);
+    const figure = node('figure');
+    const canvas = node('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    canvas.getContext('2d').drawImage(source, left, top, width, height, 0, 0, width, height);
+    const label = index ? 'Quantity source crop' : 'SKU source crop';
+    canvas.setAttribute('role', 'img');
+    canvas.setAttribute('aria-label', label);
+    figure.append(canvas, node('figcaption', label));
+    $('crops').append(figure);
+  });
+}
+function activeRow() {
+  return current?.report.rows.find(row => row.id === selected);
+}
+$('sheet').addEventListener('load', () => drawSources(activeRow()));
+function inspect() {
+  const row = activeRow();
+  drawSources(row);
+  $('review').hidden = !row;
+  if (!row) return;
+  $('selected').textContent = `Review row ${row.id} · OCR ${row.sku.raw || '—'} / ${row.count.raw || row.count.state}`;
+  $('sku').value = row.verified?.sku ?? row.sku.raw;
+  $('quantity').value = row.verified?.quantity ?? row.count.raw;
+  $('reopen').disabled = !row.verified;
+  $('suggestions').replaceChildren(...row.suggestions.map(sku => {
+    const button = node('button', `Use ${sku} · ${current.report.catalogue.items[sku]}`);
+    button.type = 'button';
+    button.addEventListener('click', () => { $('sku').value = sku; $('sku').focus(); });
+    return button;
+  }));
+}
+$('flagged').addEventListener('change', renderRows);
