@@ -19,3 +19,12 @@ class StoreTests(unittest.TestCase):
             self.assertIsNone(final["rows"][0]["verified"])
             self.assertEqual(final["rows"][0]["count"]["raw"], "0")
             self.assertEqual([event["action"] for event in final["history"]], ["approve", "reopen"])
+
+    def test_confirmed_total_is_audited_without_overwriting_ocr(self):
+        with tempfile.TemporaryDirectory() as folder:
+            store = Store(folder)
+            sheet = store.add(Image.new("RGB", (100, 100)), report())
+            updated = store.update(sheet, None, None, "14", 0, "confirm-total")
+            self.assertEqual(updated["verified_total"], 14)
+            self.assertEqual(updated["total"]["raw"], "0")
+            self.assertEqual(updated["history"][0]["after"], 14)

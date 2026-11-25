@@ -36,7 +36,7 @@ python -m unittest discover -s tests -v
 
 - **Alignment and extraction** use bounded image decoding, manual corner correction, deskew, ruled-grid detection and offline digit classification.
 - **Review** flags uncertain reads, unknown SKUs, blanks, unreadable marks and duplicate candidates. Suggestions never replace the raw OCR. Explicit edits and reopening events are recorded with their previous values.
-- **Reconciliation** compares an OCR-read printed total with the sum of approved quantities once all rows are resolved. An uncertain or missing total stays unknown. The total never fills a missing quantity.
+- **Reconciliation** compares an OCR-read printed total with the sum of approved quantities once all rows are resolved. Reviewers can confirm a printed total separately and preserve the original OCR reading. An uncertain or missing total stays unknown until confirmed. The total never fills a missing quantity.
 - **Storage** uses SQLite for approval history and the local filesystem for scans. The HTTP server binds to loopback. Use the demo locally with non-sensitive images.
 
 The current model supports digits and a documented two-column format. Real-world sheet accuracy is unverified. The benchmark uses stylus strokes composited onto generated tables, so its metrics should guide review design rather than stock-control decisions.
