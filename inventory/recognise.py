@@ -8,6 +8,7 @@ from sklearn.datasets import load_digits
 from sklearn.neighbors import KNeighborsClassifier
 
 from .grid import cell_boxes, detect, ink
+from .training import training_glyphs
 
 
 def glyph(mask):
@@ -41,6 +42,9 @@ def model():
                     if len(parts) == len(text):
                         features.extend(glyph(part[-1]) for part in parts)
                         targets.extend(int(value) for value in text)
+    for mask, digit in training_glyphs():
+        features.append(glyph(mask))
+        targets.append(digit)
     return KNeighborsClassifier(n_neighbors=9, weights="distance", n_jobs=1).fit(features, targets)
 
 
