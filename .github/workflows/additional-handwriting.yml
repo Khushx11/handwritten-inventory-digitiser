@@ -7,6 +7,9 @@ on:
       - inventory/extra_datasets.py
       - inventory/extra_training.py
       - inventory/portable_model.py
+      - inventory/segmentation.py
+      - inventory/sheet_training.py
+      - inventory/external_digits.py
       - .github/workflows/additional-handwriting.yml
 permissions:
   contents: read
@@ -50,6 +53,24 @@ jobs:
           python -m inventory.writer_benchmark runtime/uji-pen.zip \
             --model runtime/handwriting-robust.npz --comparison-model runtime/handwriting-mlp.npz \
             --extended-stress --gate-scan-quality --output runtime/stress-cross-checked-model.json
+      - uses: actions/checkout@v4
+        with:
+          repository: niklashenning/hwd-1000-dataset
+          ref: 93b3ba9e45624ee557360229a42298eaa6b3a106
+          path: runtime/hwd-1000
+          persist-credentials: false
+      - name: Verify touching-digit recovery and external handwriting transfer
+        run: |
+          python -m inventory.extra_training --mnist runtime/mnist.npz --pendigits runtime/pendigits.zip \
+            --sheet-adapted --output runtime/sheet-adapted-digit-results.json --weights runtime/handwriting-sheet-adapted.npz
+          python -m inventory.writer_benchmark runtime/uji-pen.zip \
+            --model runtime/handwriting-robust.npz --comparison-model runtime/handwriting-mlp.npz \
+            --extended-stress --gate-scan-quality --recover-touching --output runtime/touching-sku-results.json
+          python -m inventory.writer_benchmark runtime/uji-pen.zip \
+            --model runtime/handwriting-sheet-adapted.npz --comparison-model runtime/handwriting-mlp.npz \
+            --extended-stress --gate-scan-quality --recover-touching --output runtime/sheet-adapted-stress-results.json
+          python -m inventory.external_digits runtime/hwd-1000 --robust runtime/handwriting-robust.npz \
+            --sheet-adapted runtime/handwriting-sheet-adapted.npz --output runtime/external-digit-results.json
       - uses: actions/upload-artifact@v4
         with:
           name: additional-handwriting-metrics
@@ -60,3 +81,7 @@ jobs:
             runtime/stress-standard-model.json
             runtime/stress-augmented-model.json
             runtime/stress-cross-checked-model.json
+            runtime/sheet-adapted-digit-results.json
+            runtime/touching-sku-results.json
+            runtime/sheet-adapted-stress-results.json
+            runtime/external-digit-results.json

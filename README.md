@@ -53,6 +53,10 @@ The optional MNIST and PenDigits model scored **97.46%** and **93.40%** on their
 
 Try **Blurred photo**, **Faint handwriting** or **Crowded digits** from the example selector. The app shows scan-quality warnings and flags faint recovered readings for review. An optional degradation-trained model improved exact rows in the paired blur tests. For difficult scans, enable the second-model check and conservative review policy. [Stress results and reproduction](docs/difficult-scans.md)
 
+## Touching digits and real photographs
+
+Conservative mode can propose a catalogue SKU when handwriting components touch. Reviewers still enter the verified SKU from the crop. The crowded benchmark produced **38 correct proposals out of 42**. A new sheet-adapted model performed worse on severe blur, so the existing augmented model remains in service. [Crowded and blurred results, external dataset and private photo benchmark](docs/touching-digits-and-real-photos.md)
+
 ## Design
 
 - **Alignment and extraction** use bounded image decoding, manual corner correction, deskew, ruled-grid detection and offline digit classification.
