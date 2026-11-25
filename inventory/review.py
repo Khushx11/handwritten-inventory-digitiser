@@ -27,6 +27,14 @@ def approve(report, row, sku, quantity):
            for other in report["rows"]):
         raise ValueError("This SKU already has an approved row. Resolve duplicates first.")
     row["verified"] = {"sku": sku, "quantity": int(quantity)}
+    row.pop("exclusion_reason", None)
+
+
+def exclude(row, reason):
+    if not isinstance(reason, str) or not 2 <= len(reason.strip()) <= 240:
+        raise ValueError("Enter an exclusion reason of 2 to 240 characters.")
+    row["verified"] = None
+    row["exclusion_reason"] = reason.strip()
 
 
 def reconcile(report):
@@ -36,8 +44,9 @@ def reconcile(report):
     stated = confirmed if confirmed is not None else (
         int(total["raw"]) if total["state"] == "recognised" and total["confidence"] >= 0.80 else None
     )
-    unresolved = len(report["rows"]) - len(counts)
-    return {"approved_sum": sum(counts), "unresolved": unresolved, "stated_total": stated,
+    excluded = sum(bool(row.get("exclusion_reason")) for row in report["rows"])
+    unresolved = len(report["rows"]) - len(counts) - excluded
+    return {"approved_sum": sum(counts), "unresolved": unresolved, "excluded": excluded, "stated_total": stated,
             "total_source": "reviewed" if confirmed is not None else "ocr" if stated is not None else None,
             "difference": sum(counts) - stated if not unresolved and stated is not None else None}
 

@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
-from .review import approve, confirm_total
+from .review import approve, confirm_total, exclude
 
 
 class Store:
@@ -57,7 +57,7 @@ class Store:
                 "SELECT event FROM history WHERE sheet = ? ORDER BY sequence", (sheet,))]
         return report
 
-    def update(self, sheet, row_id, sku, quantity, revision, action):
+    def update(self, sheet, row_id, sku, quantity, revision, action, reason=None):
         with self.connect() as connection:
             connection.execute("BEGIN IMMEDIATE")
             report = self.read(connection, sheet)
@@ -71,14 +71,17 @@ class Store:
                 row = next((row for row in report["rows"] if row["id"] == row_id), None)
                 if row is None:
                     raise KeyError("Row not found.")
-                before = row["verified"]
+                before = row["verified"] or ({"exclusion_reason": row["exclusion_reason"]} if row.get("exclusion_reason") else None)
                 if action == "reopen":
                     row["verified"] = None
+                    row.pop("exclusion_reason", None)
                 elif action == "approve":
                     approve(report, row, sku, quantity)
+                elif action == "exclude":
+                    exclude(row, reason)
                 else:
                     raise ValueError("Unknown review action.")
-                after = row["verified"]
+                after = row["verified"] or ({"exclusion_reason": row["exclusion_reason"]} if row.get("exclusion_reason") else None)
             report["revision"] = revision + 1
             event = {"row": row_id, "action": action, "before": before, "after": after,
                      "time": datetime.now(timezone.utc).isoformat()}

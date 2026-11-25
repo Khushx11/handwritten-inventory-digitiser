@@ -8,9 +8,10 @@ from importlib.resources import files
 from io import BytesIO
 import json
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 import re
 
-from .export import as_csv, records
+from .export import as_csv, records, status
 from .fixtures import sheet
 from .geometry import decode, rectify
 from .image_quality import assess
@@ -49,9 +50,12 @@ def handler_for(store, classifier=None):
             self.send(json.dumps(data, allow_nan=False).encode(), "application/json", status, filename)
 
         def report(self, sheet_id, report):
-            return {"sheet": sheet_id, "report": report, "reconciliation": reconcile(report)}
+            reconciliation = reconcile(report)
+            return {"sheet": sheet_id, "report": report, "reconciliation": reconciliation,
+                    "export_status": status(reconciliation)}
 
         def do_GET(self):
+            request = urlsplit(self.path)
             try:
                 if self.path in ASSETS:
                     name, content_type = ASSETS[self.path]
@@ -63,16 +67,25 @@ def handler_for(store, classifier=None):
                     if condition not in EXAMPLES:
                         raise KeyError("Example not found.")
                     self.send(png(sheet(stress=condition)[0]), "image/png")
-                elif match := SHEET.fullmatch(self.path):
+                elif match := SHEET.fullmatch(request.path):
                     sheet_id, action = match.groups()
                     report = store.get(sheet_id)
                     if action in {"image", "original"}:
                         ending = ".png" if action == "image" else "-original.png"
                         self.send((store.directory / (sheet_id + ending)).read_bytes(), "image/png")
-                    elif action == "json":
-                        self.json(records(report), filename="stocktake.json")
-                    elif action == "csv":
-                        self.send(as_csv(report).encode(), "text/csv; charset=utf-8", filename="stocktake.csv")
+                    elif action in {"json", "csv"}:
+                        payload = records(report)
+                        state = payload["export_status"]
+                        revision = str(report.get("revision", 0))
+                        if state == "mismatch" and parse_qs(request.query).get("confirm_revision") != [revision]:
+                            self.json({"error": "Totals do not match. Confirm the current revision before exporting."},
+                                      HTTPStatus.CONFLICT)
+                            return
+                        filename = f"stocktake-{state}.{action}"
+                        if action == "json":
+                            self.json(payload, filename=filename)
+                        else:
+                            self.send(as_csv(report).encode(), "text/csv; charset=utf-8", filename=filename)
                     elif action is None:
                         self.json(self.report(sheet_id, report))
                     else:
@@ -116,7 +129,7 @@ def handler_for(store, classifier=None):
                     self.json(self.report(sheet_id, store.get(sheet_id)), HTTPStatus.CREATED)
                 elif (match := SHEET.fullmatch(self.path)) and match[2] == "review":
                     report = store.update(match[1], data["row"], data.get("sku"), data.get("quantity"),
-                                          data["revision"], data["action"])
+                                          data["revision"], data["action"], data.get("reason"))
                     self.json(self.report(match[1], report))
                 else:
                     self.json({"error": "Endpoint not found."}, HTTPStatus.NOT_FOUND)
