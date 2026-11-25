@@ -14,6 +14,7 @@ plots = ["matplotlib==3.10.6"]
 
 [project.scripts]
 inventory-digitiser = "inventory.webserver:main"
+inventory-digitiser-setup = "inventory.setup:main"
 
 [tool.setuptools.package-data]
 inventory = ["web/*", "catalogue.json", "uji_training.json"]

@@ -1,10 +1,15 @@
 """Load numeric model weights without Python-object deserialisation."""
+import hashlib
+from io import BytesIO
+
 import numpy as np
 
 
 class PortableMLP:
     def __init__(self, path):
-        with np.load(path, allow_pickle=False) as archive:
+        raw = path.read_bytes()
+        self.model_id = {"family": "inventory-mlp", "sha256": hashlib.sha256(raw).hexdigest()}
+        with np.load(BytesIO(raw), allow_pickle=False) as archive:
             self.classes_ = archive["classes"]
             self.weights = [archive[f"w{i}"] for i in range(3)]
             self.bias = [archive[f"b{i}"] for i in range(3)]

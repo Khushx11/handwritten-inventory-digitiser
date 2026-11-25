@@ -93,6 +93,10 @@ const base = () => `/api/sheets/${current.sheet}`;
 function display() {
   const {report, reconciliation} = current;
   $('workspace').hidden = false;
+  const models = report.models;
+  $('model-provenance').textContent = models ?
+    [models.primary, models.comparison].filter(Boolean).map(model => `${model.family} · ${model.sha256.slice(0, 12)}`).join(' / ') :
+    'Model identifiers were not recorded for this older sheet.';
   const warnings = report.scan_quality?.warnings ?? [];
   $('scan-warnings').replaceChildren(...warnings.map(warning => node('li', warning)));
   $('scan-warnings').hidden = !warnings.length;

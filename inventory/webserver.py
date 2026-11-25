@@ -2,6 +2,7 @@
 import argparse
 import base64
 import binascii
+import hashlib
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from importlib.resources import files
@@ -32,7 +33,21 @@ def png(image):
     return stream.getvalue()
 
 
+def model_provenance(classifier):
+    if classifier is None:
+        import sklearn
+        source = files("inventory")
+        digest = hashlib.sha256()
+        for name in ("recognise.py", "training.py", "fixtures.py", "grid.py", "uji_training.json"):
+            digest.update(source.joinpath(name).read_bytes())
+        digest.update(sklearn.__version__.encode())
+        return {"primary": {"family": "bundled-knn", "sha256": digest.hexdigest()}, "comparison": None}
+    comparison = getattr(classifier, "comparison", None)
+    return {"primary": classifier.model_id, "comparison": comparison.model_id if comparison else None}
+
+
 def handler_for(store, classifier=None):
+    provenance = model_provenance(classifier)
     class Handler(BaseHTTPRequestHandler):
         def send(self, content, kind, status=HTTPStatus.OK, filename=None):
             self.send_response(status)
@@ -121,6 +136,7 @@ def handler_for(store, classifier=None):
                         if quality["warnings"]:
                             raise ValueError(f"{error} {' '.join(quality['warnings'])}") from error
                         raise
+                    report["models"] = provenance
                     report["scan_quality"] = quality
                     cutoff = getattr(classifier, "review_cutoff", 0.8)
                     report["quality_gate"] = cutoff > 0.8
@@ -139,13 +155,13 @@ def handler_for(store, classifier=None):
     return Handler
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8010)
     parser.add_argument("--workspace", type=Path, default=Path("runtime"))
     parser.add_argument("--model", type=Path, help="Optional locally trained numeric MLP weights")
     parser.add_argument("--comparison-model", type=Path, help="Optional second checkpoint for disagreement review")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     from .portable_model import CrossCheckedMLP, PortableMLP
     if args.comparison_model and not args.model:
         parser.error("--comparison-model requires --model")
