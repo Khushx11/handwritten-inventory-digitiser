@@ -172,3 +172,33 @@ function inspect() {
   }));
 }
 $('flagged').addEventListener('change', renderRows);
+
+async function change(action) {
+  const form = $('review');
+  const buttons = [...form.querySelectorAll('button')];
+  buttons.forEach(button => { button.disabled = true; });
+  try {
+    current = await post(base() + '/review', {
+      row: selected, revision: current.report.revision ?? 0,
+      sku: $('sku').value.trim(), quantity: $('quantity').value.trim(), action,
+    });
+    display();
+    $('review-status').textContent = action === 'approve' ? 'Row approved.' : 'Row reopened.';
+  } catch (error) {
+    $('review-status').textContent = error.message;
+  } finally {
+    buttons.forEach(button => { button.disabled = false; });
+    $('reopen').disabled = !activeRow()?.verified;
+  }
+}
+$('review').addEventListener('submit', event => {
+  event.preventDefault();
+  change('approve');
+});
+$('reopen').addEventListener('click', () => change('reopen'));
+const recent = localStorage.getItem('stocktake-sheet');
+if (recent && /^[a-f0-9]{32}$/.test(recent)) {
+  api('/api/sheets/' + recent).then(result => {
+    if (!current) { current = result; display(); }
+  }).catch(() => localStorage.removeItem('stocktake-sheet'));
+}
