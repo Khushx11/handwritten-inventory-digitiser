@@ -17,6 +17,8 @@ Turn ruled stocktake sheets into source-linked inventory records. Upload a photo
 
 [Watch the 66-second walkthrough](https://raw.githubusercontent.com/Khushx11/handwritten-inventory-digitiser/main/docs/demo/walkthrough.mp4).
 
+The recorded walkthrough shows the earlier workspace layout. The current version uses the same source-linked review and export workflow.
+
 ## Run locally
 
 Use Python 3.11–3.13.
