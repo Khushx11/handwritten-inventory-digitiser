@@ -20,3 +20,19 @@ a{color:var(--accent);margin:.2rem}#workspace .toolbar a{white-space:nowrap}
 @media(max-width:800px){.workspace{grid-template-columns:1fr}.toolbar{align-items:flex-start}.source{order:2}}
 
 .quality-notice{background:#fff5db;color:#64410d;border:1px solid #dec48f;border-radius:.65rem;margin:0 0 1rem;padding:.7rem 1rem .7rem 2rem}
+
+:root {color:#253128;background:#e6e9dc;--accent:#31543b;--border:#bbc4b2}
+body {background-image:repeating-linear-gradient(0deg,transparent 0 31px,#63785219 32px)}
+header {border-bottom:3px double #697d63;padding:18px 0;position:relative}
+header h1 {font-family:ui-monospace,"Courier New",monospace;letter-spacing:-.055em}
+header::after {content:"";position:absolute;right:0;top:24px;width:104px;height:36px;background:repeating-linear-gradient(90deg,#334a36 0 2px,transparent 2px 5px,#334a36 5px 6px,transparent 6px 9px)}
+header .brand {font-family:ui-monospace,monospace;text-transform:uppercase;letter-spacing:.07em}
+.receiving {border-top:5px solid #49674a}
+.workspace > .panel {border-radius:4px}
+.source {background:#f5f5e9}
+#example {border-style:dashed;color:#31543b;background:#eff3e5}
+#stats {font:600 .92rem/1.5 ui-monospace,monospace}
+.workspace form input {font-family:ui-monospace,monospace}
+@media(max-width:800px){header::after{display:none}}
+:focus-visible {outline:3px solid currentColor;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
