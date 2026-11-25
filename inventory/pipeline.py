@@ -1,7 +1,7 @@
 from .baseline import page_reader
 from .grid import cell_boxes, deskew, detect
 from .matching import catalogue, suggestions
-from .recognise import cell
+from .recognise import cell, printed_total
 
 
 def extract(image, strategy="cell"):
@@ -20,7 +20,7 @@ def extract(image, strategy="cell"):
             "id": index, "sku": sku, "count": count, "boxes": [sku_box, count_box],
             "suggestions": suggestions(sku["raw"], reference["items"]),
         })
-    return aligned, {"rows": rows, "total": read(total_box), "total_box": total_box,
+    return aligned, {"rows": rows, "total": printed_total(aligned, total_box), "total_box": total_box,
                      "catalogue": reference, "strategy": strategy}
 
 

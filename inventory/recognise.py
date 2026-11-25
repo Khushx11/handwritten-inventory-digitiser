@@ -2,7 +2,7 @@
 from functools import lru_cache
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw
 from scipy import ndimage
 from sklearn.datasets import load_digits
 from sklearn.neighbors import KNeighborsClassifier
@@ -57,14 +57,15 @@ def components(mask):
     return sorted(found, key=lambda part: part[0])
 
 
-def recognise(parts, *, width, expected=None):
+def recognise(parts, *, width, expected=None, classifier=None):
     if not parts:
         return {"raw": "", "confidence": 0.0, "state": "blank"}
     if len(parts) > 6 or any(right-left >= width * 0.4 or right-left > (bottom-top)*1.5
                              for left, top, right, bottom, _ in parts):
         return {"raw": "", "confidence": 0.0, "state": "unreadable"}
-    probabilities = model().predict_proba([glyph(part[-1]) for part in parts])
-    raw = "".join(str(digit) for digit in model().classes_[probabilities.argmax(axis=1)])
+    classifier = classifier or model()
+    probabilities = classifier.predict_proba([glyph(part[-1]) for part in parts])
+    raw = "".join(str(digit) for digit in classifier.classes_[probabilities.argmax(axis=1)])
     confidence = float(probabilities.max(axis=1).min())
     state = "unreadable" if expected and len(raw) != expected else "recognised"
     return {"raw": raw, "confidence": round(confidence, 5), "state": state}
@@ -73,3 +74,19 @@ def recognise(parts, *, width, expected=None):
 def cell(image, box, expected=None):
     crop = image.crop(box)
     return recognise(components(ink(crop)), width=crop.width, expected=expected)
+
+@lru_cache(maxsize=1)
+def printed_model():
+    features, targets = [], []
+    for size in (24, 27, 31, 35, 38):
+        for digit in range(10):
+            sample = Image.new("L", (60, 65), "white")
+            ImageDraw.Draw(sample).text((8, 5), str(digit), fill="black", font_size=size)
+            features.append(glyph(ink(sample)))
+            targets.append(digit)
+    return KNeighborsClassifier(n_neighbors=5, weights="distance", n_jobs=1).fit(features, targets)
+
+
+def printed_total(image, box):
+    crop = image.crop(box)
+    return recognise(components(ink(crop)), width=crop.width, classifier=printed_model())

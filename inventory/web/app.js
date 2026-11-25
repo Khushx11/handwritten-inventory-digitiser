@@ -99,7 +99,7 @@ function display() {
   $('download-json').href = base() + '/json';
   $('download-csv').href = base() + '/csv';
   const {unresolved, approved_sum, stated_total, difference} = reconciliation;
-  const sum = stated_total === null ? 'Printed total unreadable or absent' : `Printed total ${stated_total}`;
+  const sum = stated_total === null ? 'Printed total unreadable or absent' : `OCR printed total ${stated_total}`;
   const diff = difference === null ? '' : ` · Difference ${difference}`;
   $('stats').textContent = `${unresolved} unresolved · Approved sum ${approved_sum} · ${sum}${diff}`;
   $('history').replaceChildren(...report.history.map(event => {
