@@ -38,6 +38,10 @@ python -m inventory.writer_benchmark /tmp/uji-pen.zip --output docs/writer-metri
 python -m unittest discover -s tests -v
 ```
 
+## Additional handwriting model
+
+The optional MNIST and PenDigits model scored **97.46%** and **93.40%** on their respective official test partitions. It reached **86.1% exact row accuracy** on the same clean writer-held-out stocktake composites. The benchmark still found wrong quantities above the simulated acceptance threshold. [Results and training instructions](docs/additional-handwriting.md)
+
 ## Design
 
 - **Alignment and extraction** use bounded image decoding, manual corner correction, deskew, ruled-grid detection and offline digit classification.
