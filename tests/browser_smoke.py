@@ -75,6 +75,25 @@ def run(url, record):
         expect(page.get_by_text("5 unresolved" if record else "4 unresolved", exact=False)).to_be_visible()
         expect(page.get_by_text("Confirmed total 80", exact=False)).to_be_visible()
         if not record:
+            page.get_by_label("Flagged only").uncheck()
+            for number in (1, 2, 5, 6):
+                page.get_by_role("button", name=f"Row {number}", exact=False).click()
+                page.get_by_label("Exclusion reason").fill("Synthetic mismatch test: deliberately omit this row")
+                page.get_by_role("button", name="Exclude row").click()
+                expect(page.get_by_text("Row excluded.", exact=True)).to_be_visible()
+            expect(page.get_by_text("Export: mismatch", exact=False)).to_be_visible()
+            csv_link = page.get_by_role("link", name="Export CSV")
+            href = csv_link.get_attribute("href")
+            assert href
+            blocked = page.request.get(url.rstrip("/") + href)
+            assert blocked.status == 409
+            assert page.request.get(url.rstrip("/") + href + "?confirm_revision=0").status == 409
+            page.once("dialog", lambda dialog: dialog.accept())
+            with page.expect_download() as confirmed:
+                csv_link.click()
+            assert confirmed.value.suggested_filename == "stocktake-mismatch.csv"
+            row = next(csv.DictReader(StringIO(confirmed.value.path().read_text())))
+            assert row["export_status"] == "mismatch" and row["total_difference"] == "-67"
             page.get_by_label("Example condition").select_option("heavy-blur")
             page.get_by_role("button", name="Load labelled example").click()
             expect(page.get_by_text("Soft edges detected.", exact=False)).to_be_visible(timeout=20_000)
