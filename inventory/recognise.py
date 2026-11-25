@@ -1,0 +1,62 @@
+"""Small offline digit classifier trained on the scikit-learn digits dataset."""
+from functools import lru_cache
+
+import numpy as np
+from PIL import Image
+from scipy import ndimage
+from sklearn.datasets import load_digits
+from sklearn.neighbors import KNeighborsClassifier
+
+from .grid import ink
+
+
+def glyph(mask):
+    y, x = np.nonzero(mask)
+    if not len(x):
+        return np.zeros(64)
+    crop = Image.fromarray(np.asarray(mask[y.min():y.max()+1, x.min():x.max()+1] * 255, dtype=np.uint8))
+    crop.thumbnail((7, 8), Image.Resampling.LANCZOS)
+    ratio = min(7 / crop.width, 8 / crop.height)
+    crop = crop.resize((max(1, round(crop.width * ratio)), max(1, round(crop.height * ratio))), Image.Resampling.LANCZOS)
+    canvas = Image.new("L", (8, 8))
+    canvas.paste(crop, ((8-crop.width)//2, (8-crop.height)//2))
+    return np.asarray(canvas).ravel() / 255
+
+
+@lru_cache(maxsize=1)
+def model():
+    data = load_digits()
+    features = [glyph(np.asarray(Image.fromarray((image * 15).astype("uint8")).resize((40, 40))) > 85)
+                for image in data.images]
+    return KNeighborsClassifier(n_neighbors=9, weights="distance").fit(features, data.target)
+
+
+def components(mask):
+    labels, count = ndimage.label(mask, np.ones((3, 3)))
+    found = []
+    for i, bounds in enumerate(ndimage.find_objects(labels, max_label=count), 1):
+        y, x = bounds
+        if (y.stop - y.start) < 8 or (x.stop - x.start) < 2:
+            continue
+        piece = labels[bounds] == i
+        if piece.sum() >= 18:
+            found.append((x.start, y.start, x.stop, y.stop, piece))
+    return sorted(found, key=lambda part: part[0])
+
+
+def recognise(parts, *, width, expected=None):
+    if not parts:
+        return {"raw": "", "confidence": 0.0, "state": "blank"}
+    if len(parts) > 6 or any(right-left >= width * 0.4 or right-left > (bottom-top)*1.5
+                             for left, top, right, bottom, _ in parts):
+        return {"raw": "", "confidence": 0.0, "state": "unreadable"}
+    probabilities = model().predict_proba([glyph(part[-1]) for part in parts])
+    raw = "".join(str(digit) for digit in model().classes_[probabilities.argmax(axis=1)])
+    confidence = float(probabilities.max(axis=1).min())
+    state = "unreadable" if expected and len(raw) != expected else "recognised"
+    return {"raw": raw, "confidence": round(confidence, 5), "state": state}
+
+
+def cell(image, box, expected=None):
+    crop = image.crop(box)
+    return recognise(components(ink(crop)), width=crop.width, expected=expected)
