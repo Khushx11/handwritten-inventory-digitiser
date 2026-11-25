@@ -31,8 +31,13 @@ def deskew(image):
 def detect(image):
     for relaxed in (False, True):
         mask = ink(image, relaxed=relaxed)
-        x = line_centres(mask.sum(axis=0), image.height * 0.46)
-        y = line_centres(mask.sum(axis=1), image.width * 0.45)
+        vertical = horizontal = mask
+        if relaxed:
+            # Keep long contiguous rules, not the swollen handwriting around them.
+            vertical = ndimage.binary_opening(mask, structure=np.ones((max(3, image.height//9), 1)))
+            horizontal = ndimage.binary_opening(mask, structure=np.ones((1, max(3, image.width//9))))
+        x = line_centres(vertical.sum(axis=0), image.height * 0.46)
+        y = line_centres(horizontal.sum(axis=1), image.width * 0.45)
         if (len(x) == 3 and 4 <= len(y) <= 32
                 and min(np.diff(x)) >= 24 and min(np.diff(y)) >= 22):
             return x, y
