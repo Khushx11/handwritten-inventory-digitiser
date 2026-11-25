@@ -4,6 +4,22 @@ Portfolio by [Khush Bhavin Maru](https://github.com/Khushx11) · Adelaide Univer
 
 Turn ruled stocktake sheets into source-linked inventory records. Upload a photo, inspect each recognised SKU and count beside its source crop, then correct and approve the rows you want to export.
 
+
+## Stocktake review workflow
+
+```mermaid
+flowchart LR
+    A["Ruled stocktake photo"]
+    B["Detect and read cells"]
+    C["Verify against source crops"]
+    D["Approve and export rows"]
+    A --> B --> C --> D
+```
+
+![Clean writer-held-out exact row accuracy](docs/readme-benchmark.svg)
+
+72 clean stocktake rows composited from six held-out writers. See Difficult scans for degradation results.
+
 ## Watch the workflow
 
 [66-second captioned walkthrough](https://raw.githubusercontent.com/Khushx11/handwritten-inventory-digitiser/main/docs/demo/walkthrough.mp4)
