@@ -6,7 +6,7 @@ Both benchmarks use the same fixed threshold grid and measure the percentage of 
 
 ## Measured results
 
-On 72 clean rows composited from six held-out UCI writers across two held-out layouts, both strategies reached 52.8% exact row accuracy, 58.3% exact SKU accuracy, 83.3% exact quantity accuracy and 16.3% character error rate. Row alignment was 100% on these generated sheets. Warm mean processing time was about 20 ms per sheet for cell-first and 22 ms for page-first on the local Mac. The accuracy tie gives no evidence that cell-first improves recognition on this benchmark.
+On 72 clean rows composited from six held-out UCI writers across two held-out layouts, both strategies reached 52.8% exact row accuracy, 58.3% exact SKU accuracy, 83.3% exact quantity accuracy and 16.3% character error rate. Row alignment was 100% on these generated sheets. The accuracy tie gives no evidence that cell-first improves recognition on this benchmark.
 
 At the fixed 0.80 threshold, both methods marked 60 of 72 clean rows for review. All 12 remaining rows were correct. Across the skew stress condition, two incorrect quantities passed the same threshold among 18 accepted rows. The model's neighbour vote is uncalibrated. A low review rate alone is insufficient to justify automatic export.
 
@@ -19,6 +19,6 @@ On the separate procedural clean benchmark (24 held-out rows per method), both m
 
 The plotted points span the fixed threshold grid. The default 0.80 points are labelled with the accepted-row count. Rows are routed as a unit, so the fraction of cells in reviewed rows equals the row review rate.
 
-A row is aligned when both detected cell centres fall in the expected columns and within a quarter of a row height of its expected centre. Character error uses edit distance divided by reference characters. Quantity exact match distinguishes a blank from an unreadable value. The risk calculation treats a crossed-out quantity as requiring review even when digits happen to match. Warm latency excludes model initialisation and HTTP transport.
+Reference rows are paired one-to-one with detected rows using cell positions. Both detected cell centres must fall in the expected columns and within a quarter of a row height of the expected centre. Unmatched reference rows are missing and unmatched detections are extra. Exact-row accuracy uses reference rows plus extra detections as its denominator. An extra detection accepted by the review policy counts as an error. The corrected rerun found no missing or extra detections in the held-out cell-first composites. The regression test introduces both cases deliberately. Character error uses edit distance divided by reference characters. Quantity exact match distinguishes a blank from an unreadable value. The risk calculation treats a crossed-out quantity as requiring review even when digits happen to match. Warm latency excludes model initialisation and HTTP transport.
 
 To regenerate the chart, install the optional plotting dependencies and run `python scripts/plot_review_policy.py`.

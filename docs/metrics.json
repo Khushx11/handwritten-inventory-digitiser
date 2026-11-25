@@ -16,7 +16,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 45.381,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -37,8 +40,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 41.446
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -48,7 +50,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 45.381,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -69,8 +74,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 41.446
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -80,7 +84,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 45.381,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -95,8 +102,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 41.446
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -106,7 +112,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 45.381,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -127,8 +136,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 41.446
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -138,7 +146,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 45.381,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -159,8 +170,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 41.446
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -170,7 +180,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 45.381,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -189,8 +202,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 41.446
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -200,7 +212,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 24.969,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -217,8 +232,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.971
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -228,7 +242,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 24.969,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -248,8 +265,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.971
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -259,7 +275,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 24.969,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -274,8 +293,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.971
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -285,7 +303,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 24.969,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -306,8 +327,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.971
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -317,7 +337,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 24.969,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -338,8 +361,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.971
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -349,7 +371,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 24.969,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -366,8 +391,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.971
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -377,7 +401,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 23.999,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -398,8 +425,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.946
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -409,7 +435,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 23.999,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -430,8 +459,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.946
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -441,7 +469,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 23.999,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -456,8 +487,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.946
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -467,7 +497,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 23.999,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -486,8 +519,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.946
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -497,7 +529,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 23.999,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -518,8 +553,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.946
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -529,7 +563,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 23.999,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -546,8 +583,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.946
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -557,7 +593,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.47,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -578,8 +617,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.118
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -589,7 +627,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.47,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -610,8 +651,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 32.118
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -621,7 +661,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.47,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -636,8 +679,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 32.118
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -647,7 +689,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.47,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -668,8 +713,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.118
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -679,7 +723,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.47,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -700,8 +747,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.118
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -711,7 +757,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.47,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -732,8 +781,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 32.118
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -743,7 +791,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.95,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -764,8 +815,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.461
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -775,7 +825,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.95,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -796,8 +849,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.461
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -807,7 +859,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.95,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -822,8 +877,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 20.461
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -833,7 +887,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.95,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -848,8 +905,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.461
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -859,7 +915,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.95,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -876,8 +935,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.461
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -887,7 +945,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.95,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -904,8 +965,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.461
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -915,7 +975,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.526,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -936,8 +999,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.098
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -947,7 +1009,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.526,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -968,8 +1033,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.098
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -979,7 +1043,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.526,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -994,8 +1061,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.098
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -1005,7 +1071,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.526,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1026,8 +1095,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.098
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1037,7 +1105,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.526,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1058,8 +1129,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.098
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1069,7 +1139,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.526,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1090,8 +1163,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.098
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1101,7 +1173,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.575,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1118,8 +1193,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.083
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1129,7 +1203,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.575,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1150,8 +1227,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.083
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1161,7 +1237,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.575,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1176,8 +1255,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.083
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -1187,7 +1265,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.575,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -1202,8 +1283,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 21.083
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1213,7 +1293,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.575,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1234,8 +1317,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.083
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1245,7 +1327,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.575,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1266,8 +1351,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.083
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1277,7 +1361,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 24.366,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1294,8 +1381,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.871
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1305,7 +1391,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 24.366,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1326,8 +1415,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.871
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1337,7 +1425,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 24.366,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1352,8 +1443,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 20.871
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -1363,7 +1453,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 24.366,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1384,8 +1477,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.871
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1395,7 +1487,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 24.366,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1416,8 +1511,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.871
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1427,7 +1521,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 24.366,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1446,8 +1543,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.871
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1457,7 +1553,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.484,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1478,8 +1577,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.202
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1489,7 +1587,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.484,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1510,8 +1611,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 32.202
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1521,7 +1621,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.484,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1536,8 +1639,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 32.202
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -1547,7 +1649,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.484,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1568,8 +1673,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.202
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1579,7 +1683,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.484,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1600,8 +1707,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.202
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1611,7 +1717,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.484,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1632,8 +1741,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 32.202
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1643,7 +1751,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.578,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1664,8 +1775,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.678
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1675,7 +1785,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.578,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1696,8 +1809,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.678
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1707,7 +1819,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.578,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1722,8 +1837,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 20.678
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -1733,7 +1847,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.578,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -1748,8 +1865,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.678
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1759,7 +1875,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.578,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1776,8 +1895,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.678
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1787,7 +1905,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.578,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -1804,8 +1925,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.678
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1815,7 +1935,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 26.648,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -1830,8 +1953,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 23.102
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1841,7 +1963,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 26.648,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -1856,8 +1981,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 23.102
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1867,7 +1991,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 26.648,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -1882,8 +2009,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 23.102
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -1893,7 +2019,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 26.648,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -1908,8 +2037,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 23.102
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1919,7 +2047,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 26.648,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -1934,8 +2065,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 23.102
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -1945,7 +2075,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 26.648,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -1960,8 +2093,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 23.102
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1971,7 +2103,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.643,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -1986,8 +2121,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 23.066
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -1997,7 +2131,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.643,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -2012,8 +2149,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 23.066
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2023,7 +2159,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.643,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2038,8 +2177,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 23.066
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -2049,7 +2187,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.643,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -2066,8 +2207,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 23.066
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2077,7 +2217,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.643,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -2092,8 +2235,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 23.066
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2103,7 +2245,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.643,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2118,8 +2263,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 23.066
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2129,7 +2273,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 26.988,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2144,8 +2291,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 23.181
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2155,7 +2301,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 26.988,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2170,8 +2319,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 23.181
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2181,7 +2329,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 26.988,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2196,8 +2347,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 23.181
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -2207,7 +2357,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 26.988,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -2222,8 +2375,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 23.181
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2233,7 +2385,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 26.988,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -2248,8 +2403,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 23.181
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2259,7 +2413,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 26.988,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -2274,8 +2431,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 23.181
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2285,7 +2441,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.48,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2302,8 +2461,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 35.684
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2313,7 +2471,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.48,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -2328,8 +2489,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 35.684
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2339,7 +2499,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.48,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2354,8 +2517,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 4,
-      "sheet_ms": 35.684
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -2365,7 +2527,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.48,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -2380,8 +2545,7 @@
         "0.99": 2
       },
       "character_errors": 3,
-      "characters": 6,
-      "sheet_ms": 35.684
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2391,7 +2555,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.48,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -2406,8 +2573,7 @@
         "0.99": 2
       },
       "character_errors": 4,
-      "characters": 6,
-      "sheet_ms": 35.684
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2417,7 +2583,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.48,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -2434,8 +2603,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 35.684
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2445,7 +2613,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 26.299,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2460,8 +2631,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 22.775
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2471,7 +2641,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 26.299,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -2486,8 +2659,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 22.775
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2497,7 +2669,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 26.299,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2512,8 +2687,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 22.775
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -2523,7 +2697,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 26.299,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -2538,8 +2715,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 22.775
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2549,7 +2725,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 26.299,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -2564,8 +2743,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 22.775
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2575,7 +2753,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 26.299,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -2590,8 +2771,7 @@
         "0.99": 2
       },
       "character_errors": 4,
-      "characters": 6,
-      "sheet_ms": 22.775
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2601,7 +2781,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 25.194,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2616,8 +2799,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.459
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2627,7 +2809,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 25.194,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -2642,8 +2827,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.459
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2653,7 +2837,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 25.194,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2668,8 +2855,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 21.459
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -2679,7 +2865,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 25.194,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2694,8 +2883,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 21.459
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2705,7 +2893,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 25.194,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -2720,8 +2911,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 21.459
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2731,7 +2921,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 25.194,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2746,8 +2939,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.459
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2757,7 +2949,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 25.054,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2772,8 +2967,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.896
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2783,7 +2977,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 25.054,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -2798,8 +2995,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 21.896
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2809,7 +3005,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 25.054,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2824,8 +3023,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 21.896
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -2835,7 +3033,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 25.054,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -2852,8 +3053,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.896
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2863,7 +3063,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 25.054,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -2878,8 +3081,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.896
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -2889,7 +3091,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 25.054,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2904,8 +3109,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.896
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2915,7 +3119,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 24.626,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2930,8 +3137,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 21.628
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2941,7 +3147,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 24.626,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2956,8 +3165,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 21.628
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -2967,7 +3175,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 24.626,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -2982,8 +3193,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 21.628
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -2993,7 +3203,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 24.626,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -3008,8 +3221,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 21.628
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3019,7 +3231,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 24.626,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -3034,8 +3249,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 21.628
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3045,7 +3259,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 24.626,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -3060,8 +3277,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 21.628
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3071,7 +3287,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.075,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -3088,8 +3307,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 32.98
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3099,7 +3317,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.075,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3114,8 +3335,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 32.98
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3125,7 +3345,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.075,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -3140,8 +3363,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 4,
-      "sheet_ms": 32.98
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -3151,7 +3373,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.075,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -3166,8 +3391,7 @@
         "0.99": 2
       },
       "character_errors": 3,
-      "characters": 6,
-      "sheet_ms": 32.98
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3177,7 +3401,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.075,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -3192,8 +3419,7 @@
         "0.99": 2
       },
       "character_errors": 4,
-      "characters": 6,
-      "sheet_ms": 32.98
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3203,7 +3429,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.075,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3220,8 +3449,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.98
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3231,7 +3459,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 23.637,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -3246,8 +3477,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 20.929
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3257,7 +3487,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 23.637,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -3272,8 +3505,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.929
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3283,7 +3515,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 23.637,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -3298,8 +3533,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 20.929
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -3309,7 +3543,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 23.637,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -3324,8 +3561,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.929
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3335,7 +3571,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 23.637,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3350,8 +3589,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.929
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3361,7 +3599,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 23.637,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -3376,8 +3617,7 @@
         "0.99": 2
       },
       "character_errors": 4,
-      "characters": 6,
-      "sheet_ms": 20.929
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3387,7 +3627,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.745,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3408,8 +3651,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 23.094
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3419,7 +3661,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.745,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3440,8 +3685,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 23.094
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3451,7 +3695,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.745,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3466,8 +3713,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 23.094
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -3477,7 +3723,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.745,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3498,8 +3747,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 23.094
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3509,7 +3757,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.745,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3526,8 +3777,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 23.094
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3537,7 +3787,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.745,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3556,8 +3809,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 23.094
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3567,7 +3819,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.267,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3588,8 +3843,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 22.955
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3599,7 +3853,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.267,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3620,8 +3877,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 22.955
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3631,7 +3887,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.267,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3646,8 +3905,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 22.955
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -3657,7 +3915,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.267,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3678,8 +3939,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 22.955
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3689,7 +3949,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.267,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3710,8 +3973,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 22.955
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3721,7 +3983,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 26.267,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3742,8 +4007,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 22.955
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3753,7 +4017,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 28.787,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3774,8 +4041,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 22.769
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3785,7 +4051,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 28.787,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3806,8 +4075,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 22.769
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3817,7 +4085,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 28.787,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3832,8 +4103,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 22.769
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -3843,7 +4113,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 28.787,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3864,8 +4137,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 22.769
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3875,7 +4147,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 28.787,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3896,8 +4171,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 22.769
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3907,7 +4181,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 28.787,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3928,8 +4205,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 22.769
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -3939,7 +4215,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 41.336,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3960,8 +4239,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 35.641
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -3971,7 +4249,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 41.336,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -3990,8 +4271,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 35.641
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4001,7 +4281,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 41.336,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4016,8 +4299,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 35.641
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -4027,7 +4309,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 41.336,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4048,8 +4333,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 35.641
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4059,7 +4343,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 41.336,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4078,8 +4365,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 35.641
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4089,7 +4375,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 41.336,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4110,8 +4399,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 35.641
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4121,7 +4409,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 27.663,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4142,8 +4433,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 22.494
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4153,7 +4443,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 27.663,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4174,8 +4467,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 22.494
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4185,7 +4477,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 27.663,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4200,8 +4495,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 22.494
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -4211,7 +4505,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 27.663,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -4226,8 +4523,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 22.494
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4237,7 +4533,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 27.663,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4258,8 +4557,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 22.494
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4269,7 +4567,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 27.663,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4290,8 +4591,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 22.494
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4301,7 +4601,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 24.602,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4322,8 +4625,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.38
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4333,7 +4635,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 24.602,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4354,8 +4659,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.38
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4365,7 +4669,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 24.602,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4380,8 +4687,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.38
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -4391,7 +4697,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 24.602,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4412,8 +4721,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.38
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4423,7 +4731,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 24.602,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4440,8 +4751,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.38
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4451,7 +4761,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 24.602,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4470,8 +4783,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.38
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4481,7 +4793,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.02,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4502,8 +4817,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.189
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4513,7 +4827,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.02,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4534,8 +4851,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.189
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4545,7 +4861,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.02,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4560,8 +4879,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.189
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -4571,7 +4889,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.02,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4592,8 +4913,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.189
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4603,7 +4923,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.02,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4624,8 +4947,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.189
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4635,7 +4957,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.02,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4656,8 +4981,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.189
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4667,7 +4991,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 25.111,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4688,8 +5015,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.528
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4699,7 +5025,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 25.111,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4720,8 +5049,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.528
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4731,7 +5059,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 25.111,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4746,8 +5077,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.528
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -4757,7 +5087,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 25.111,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4778,8 +5111,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.528
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4789,7 +5121,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 25.111,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4810,8 +5145,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.528
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4821,7 +5155,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 25.111,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4842,8 +5179,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.528
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4853,7 +5189,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.989,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4874,8 +5213,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.98
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -4885,7 +5223,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.989,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4904,8 +5245,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 32.98
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4915,7 +5255,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.989,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4930,8 +5273,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 32.98
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -4941,7 +5283,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.989,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4962,8 +5307,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 32.98
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -4973,7 +5317,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.989,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -4992,8 +5339,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 32.98
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -5003,7 +5349,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.989,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5024,8 +5373,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 32.98
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -5035,7 +5383,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 25.202,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5056,8 +5407,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.125
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -5067,7 +5417,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 25.202,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5088,8 +5441,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.125
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -5099,7 +5451,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 25.202,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5114,8 +5469,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.125
+      "characters": 4
     },
     {
       "strategy": "page",
@@ -5125,7 +5479,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 25.202,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -5140,8 +5497,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 21.125
+      "characters": 6
     },
     {
       "strategy": "page",
@@ -5151,7 +5507,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 25.202,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5172,8 +5531,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.125
+      "characters": 5
     },
     {
       "strategy": "page",
@@ -5183,7 +5541,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 25.202,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5204,8 +5565,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.125
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5215,7 +5575,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.122,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5236,8 +5599,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.436
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5247,7 +5609,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.122,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5268,8 +5633,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.436
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5279,7 +5643,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.122,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5294,8 +5661,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.436
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -5305,7 +5671,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.122,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5326,8 +5695,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.436
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5337,7 +5705,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.122,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5358,8 +5729,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.436
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5369,7 +5739,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.122,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5388,8 +5761,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.436
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5399,7 +5771,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.369,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5416,8 +5791,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.594
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5427,7 +5801,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.369,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5447,8 +5824,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.594
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5458,7 +5834,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.369,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5473,8 +5852,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.594
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -5484,7 +5862,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.369,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5505,8 +5886,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.594
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5516,7 +5896,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.369,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5537,8 +5920,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.594
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5548,7 +5930,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.369,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5565,8 +5950,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.594
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5576,7 +5960,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.853,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5597,8 +5984,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.633
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5608,7 +5994,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.853,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5629,8 +6018,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.633
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5640,7 +6028,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.853,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5655,8 +6046,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.633
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -5666,7 +6056,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.853,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5685,8 +6078,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.633
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5696,7 +6088,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.853,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5717,8 +6112,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.633
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5728,7 +6122,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.853,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5745,8 +6142,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.633
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5756,7 +6152,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 36.039,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5777,8 +6176,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 30.851
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5788,7 +6186,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 36.039,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5809,8 +6210,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 30.851
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5820,7 +6220,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 36.039,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5835,8 +6238,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 30.851
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -5846,7 +6248,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 36.039,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5867,8 +6272,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 30.851
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5878,7 +6282,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 36.039,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5899,8 +6306,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 30.851
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5910,7 +6316,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 36.039,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5931,8 +6340,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 30.851
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -5942,7 +6350,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.581,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5963,8 +6374,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.191
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -5974,7 +6384,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.581,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -5995,8 +6408,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.191
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6006,7 +6418,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.581,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6021,8 +6436,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.191
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -6032,7 +6446,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.581,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -6047,8 +6464,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 19.191
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6058,7 +6474,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.581,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6075,8 +6494,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.191
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6086,7 +6504,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.581,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6103,8 +6524,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.191
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6114,7 +6534,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.747,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6135,8 +6558,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.599
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6146,7 +6568,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.747,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6167,8 +6592,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.599
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6178,7 +6602,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.747,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6193,8 +6620,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.599
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -6204,7 +6630,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.747,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6225,8 +6654,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.599
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6236,7 +6664,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.747,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6257,8 +6688,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.599
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6268,7 +6698,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 10,
+      "sheet_ms": 23.747,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6289,8 +6722,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.599
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6300,7 +6732,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.631,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6317,8 +6752,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.754
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6328,7 +6762,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.631,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6349,8 +6786,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.754
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6360,7 +6796,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.631,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6375,8 +6814,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.754
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -6386,7 +6824,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.631,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -6401,8 +6842,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 19.754
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6412,7 +6852,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.631,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6433,8 +6876,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.754
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6444,7 +6886,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 11,
+      "sheet_ms": 23.631,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6465,8 +6910,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.754
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6476,7 +6920,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.76,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6493,8 +6940,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.648
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6504,7 +6950,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.76,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6525,8 +6974,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.648
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6536,7 +6984,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.76,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6551,8 +7002,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.648
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -6562,7 +7012,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.76,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6583,8 +7036,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.648
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6594,7 +7046,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.76,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6615,8 +7070,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.648
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6626,7 +7080,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 12,
+      "sheet_ms": 22.76,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6645,8 +7102,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.648
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6656,7 +7112,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.598,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6677,8 +7136,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 30.836
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6688,7 +7146,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.598,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6709,8 +7170,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 30.836
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6720,7 +7180,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.598,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6735,8 +7198,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 30.836
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -6746,7 +7208,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.598,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6767,8 +7232,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 30.836
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6778,7 +7242,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.598,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6799,8 +7266,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 30.836
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6810,7 +7276,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 13,
+      "sheet_ms": 35.598,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6831,8 +7300,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 30.836
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6842,7 +7310,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.252,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6863,8 +7334,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.25
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -6874,7 +7344,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.252,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6895,8 +7368,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.25
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6906,7 +7378,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.252,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6921,8 +7396,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.25
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -6932,7 +7406,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.252,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -6947,8 +7424,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 19.25
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6958,7 +7434,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.252,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -6975,8 +7454,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.25
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -6986,7 +7464,10 @@
       "writer": null,
       "layout": 0,
       "sheet_seed": 14,
+      "sheet_ms": 23.252,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -7003,8 +7484,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.25
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7014,7 +7494,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.3,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7029,8 +7512,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.246
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7040,7 +7522,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.3,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -7055,8 +7540,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.246
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7066,7 +7550,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.3,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7081,8 +7568,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 21.246
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -7092,7 +7578,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.3,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7107,8 +7596,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 21.246
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7118,7 +7606,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.3,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -7133,8 +7624,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 21.246
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7144,7 +7634,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.3,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7159,8 +7652,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.246
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7170,7 +7662,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 24.979,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7185,8 +7680,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.105
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7196,7 +7690,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 24.979,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -7211,8 +7708,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 21.105
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7222,7 +7718,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 24.979,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7237,8 +7736,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 21.105
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -7248,7 +7746,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 24.979,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -7265,8 +7766,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.105
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7276,7 +7776,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 24.979,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -7291,8 +7794,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.105
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7302,7 +7804,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 24.979,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7317,8 +7822,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 21.105
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7328,7 +7832,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 24.947,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7343,8 +7850,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 21.536
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7354,7 +7860,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 24.947,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7369,8 +7878,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 21.536
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7380,7 +7888,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 24.947,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7395,8 +7906,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 21.536
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -7406,7 +7916,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 24.947,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -7421,8 +7934,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 21.536
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7432,7 +7944,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 24.947,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -7447,8 +7962,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 21.536
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7458,7 +7972,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 24.947,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -7473,8 +7990,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 21.536
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7484,7 +8000,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.543,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7501,8 +8020,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 33.837
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7512,7 +8030,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.543,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -7527,8 +8048,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 33.837
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7538,7 +8058,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.543,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7553,8 +8076,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 4,
-      "sheet_ms": 33.837
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -7564,7 +8086,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.543,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -7579,8 +8104,7 @@
         "0.99": 2
       },
       "character_errors": 3,
-      "characters": 6,
-      "sheet_ms": 33.837
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7590,7 +8114,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.543,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -7605,8 +8132,7 @@
         "0.99": 2
       },
       "character_errors": 4,
-      "characters": 6,
-      "sheet_ms": 33.837
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7616,7 +8142,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.543,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -7633,8 +8162,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 33.837
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7644,7 +8172,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 24.636,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7659,8 +8190,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 20.907
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7670,7 +8200,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 24.636,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -7685,8 +8218,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.907
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7696,7 +8228,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 24.636,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7711,8 +8246,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 20.907
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -7722,7 +8256,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 24.636,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -7737,8 +8274,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.907
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7748,7 +8284,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 24.636,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -7763,8 +8302,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.907
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7774,7 +8312,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 24.636,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -7789,8 +8330,7 @@
         "0.99": 2
       },
       "character_errors": 4,
-      "characters": 6,
-      "sheet_ms": 20.907
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7800,7 +8340,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.126,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7815,8 +8358,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 20.008
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7826,7 +8368,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.126,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -7841,8 +8386,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 20.008
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7852,7 +8396,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.126,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7867,8 +8414,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 20.008
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -7878,7 +8424,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.126,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7893,8 +8442,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 20.008
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7904,7 +8452,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.126,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -7919,8 +8470,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 6,
-      "sheet_ms": 20.008
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -7930,7 +8480,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.126,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7945,8 +8498,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 20.008
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7956,7 +8508,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.211,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -7971,8 +8526,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 19.992
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -7982,7 +8536,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.211,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -7997,8 +8554,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 19.992
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8008,7 +8564,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.211,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8023,8 +8582,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 19.992
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -8034,7 +8592,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.211,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8051,8 +8612,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.992
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8062,7 +8622,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.211,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8077,8 +8640,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.992
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8088,7 +8650,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 24.211,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8103,8 +8668,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 19.992
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8114,7 +8678,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.916,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8129,8 +8696,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 20.083
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8140,7 +8706,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.916,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8155,8 +8724,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 20.083
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8166,7 +8734,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.916,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8181,8 +8752,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 20.083
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -8192,7 +8762,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.916,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -8207,8 +8780,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 20.083
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8218,7 +8790,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.916,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -8233,8 +8808,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.083
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8244,7 +8818,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.916,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -8259,8 +8836,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.083
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8270,7 +8846,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.899,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8287,8 +8866,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 5,
-      "sheet_ms": 31.636
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8298,7 +8876,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.899,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8313,8 +8894,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 31.636
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8324,7 +8904,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.899,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8339,8 +8922,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 4,
-      "sheet_ms": 31.636
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -8350,7 +8932,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.899,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -8365,8 +8950,7 @@
         "0.99": 2
       },
       "character_errors": 3,
-      "characters": 6,
-      "sheet_ms": 31.636
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8376,7 +8960,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.899,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -8391,8 +8978,7 @@
         "0.99": 2
       },
       "character_errors": 4,
-      "characters": 6,
-      "sheet_ms": 31.636
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8402,7 +8988,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 36.899,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8419,8 +9008,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 31.636
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8430,7 +9018,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.827,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8445,8 +9036,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 5,
-      "sheet_ms": 19.675
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8456,7 +9046,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.827,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -8471,8 +9064,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 19.675
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8482,7 +9074,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.827,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": true,
@@ -8497,8 +9092,7 @@
         "0.99": 2
       },
       "character_errors": 1,
-      "characters": 4,
-      "sheet_ms": 19.675
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -8508,7 +9102,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.827,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -8523,8 +9120,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 19.675
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8534,7 +9130,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.827,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8549,8 +9148,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.675
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8560,7 +9158,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.827,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": false,
       "quantity_exact": false,
@@ -8575,8 +9176,7 @@
         "0.99": 2
       },
       "character_errors": 4,
-      "characters": 6,
-      "sheet_ms": 19.675
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8586,7 +9186,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.166,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8607,8 +9210,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.202
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8618,7 +9220,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.166,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8639,8 +9244,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.202
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8650,7 +9254,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.166,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8665,8 +9272,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.202
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -8676,7 +9282,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.166,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8697,8 +9306,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.202
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8708,7 +9316,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.166,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8725,8 +9336,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.202
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8736,7 +9346,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 40,
+      "sheet_ms": 25.166,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8755,8 +9368,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.202
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8766,7 +9378,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 23.496,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8787,8 +9402,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.092
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8798,7 +9412,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 23.496,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8819,8 +9436,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.092
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8830,7 +9446,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 23.496,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8845,8 +9464,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.092
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -8856,7 +9474,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 23.496,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8877,8 +9498,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.092
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8888,7 +9508,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 23.496,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8909,8 +9532,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.092
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -8920,7 +9542,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 41,
+      "sheet_ms": 23.496,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8941,8 +9566,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.092
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8952,7 +9576,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 23.942,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -8973,8 +9600,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.4
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -8984,7 +9610,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 23.942,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9005,8 +9634,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.4
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9016,7 +9644,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 23.942,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9031,8 +9662,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 21.4
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -9042,7 +9672,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 23.942,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9063,8 +9696,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 21.4
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9074,7 +9706,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 23.942,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9095,8 +9730,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.4
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9106,7 +9740,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 42,
+      "sheet_ms": 23.942,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9127,8 +9764,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 21.4
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9138,7 +9774,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.978,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9159,8 +9798,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 34.457
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9170,7 +9808,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.978,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9189,8 +9830,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 34.457
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9200,7 +9840,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.978,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9215,8 +9858,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 34.457
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -9226,7 +9868,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.978,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9247,8 +9892,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 34.457
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9258,7 +9902,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.978,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9277,8 +9924,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 34.457
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9288,7 +9934,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 43,
+      "sheet_ms": 38.978,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9309,8 +9958,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 34.457
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9320,7 +9968,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 25.025,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9341,8 +9992,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.866
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9352,7 +10002,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 25.025,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9373,8 +10026,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.866
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9384,7 +10036,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 25.025,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9399,8 +10054,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 20.866
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -9410,7 +10064,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 25.025,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -9425,8 +10082,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 20.866
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9436,7 +10092,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 25.025,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9457,8 +10116,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.866
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9468,7 +10126,10 @@
       "writer": null,
       "layout": 1,
       "sheet_seed": 44,
+      "sheet_ms": 25.025,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9489,8 +10150,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.866
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9500,7 +10160,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.731,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9521,8 +10184,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.204
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9532,7 +10194,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.731,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9553,8 +10218,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.204
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9564,7 +10228,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.731,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9579,8 +10246,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 20.204
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -9590,7 +10256,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.731,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9611,8 +10280,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.204
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9622,7 +10290,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.731,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9639,8 +10310,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.204
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9650,7 +10320,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 40,
+      "sheet_ms": 23.731,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9669,8 +10342,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.204
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9680,7 +10352,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 23.757,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9701,8 +10376,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.469
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9712,7 +10386,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 23.757,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9733,8 +10410,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.469
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9744,7 +10420,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 23.757,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9759,8 +10438,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 20.469
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -9770,7 +10448,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 23.757,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9791,8 +10472,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.469
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9802,7 +10482,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 23.757,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9823,8 +10506,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.469
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -9834,7 +10516,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 41,
+      "sheet_ms": 23.757,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9855,8 +10540,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.469
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9866,7 +10550,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.536,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9887,8 +10574,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.021
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9898,7 +10584,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.536,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9919,8 +10608,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.021
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9930,7 +10618,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.536,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9945,8 +10636,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 20.021
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -9956,7 +10646,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.536,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -9977,8 +10670,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 20.021
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -9988,7 +10680,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.536,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10009,8 +10704,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.021
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -10020,7 +10714,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 42,
+      "sheet_ms": 23.536,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10041,8 +10738,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 20.021
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -10052,7 +10748,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 34.858,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10073,8 +10772,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 31.94
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -10084,7 +10782,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 34.858,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10103,8 +10804,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 31.94
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -10114,7 +10814,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 34.858,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10129,8 +10832,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 31.94
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -10140,7 +10842,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 34.858,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10161,8 +10866,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 31.94
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -10172,7 +10876,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 34.858,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10191,8 +10898,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 31.94
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -10202,7 +10908,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 43,
+      "sheet_ms": 34.858,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10223,8 +10932,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 31.94
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -10234,7 +10942,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.96,
       "row": 1,
+      "detected_row": 1,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10255,8 +10966,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.93
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -10266,7 +10976,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.96,
       "row": 2,
+      "detected_row": 2,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10287,8 +11000,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.93
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -10298,7 +11010,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.96,
       "row": 3,
+      "detected_row": 3,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10313,8 +11028,7 @@
         "0.99": 2
       },
       "character_errors": 0,
-      "characters": 4,
-      "sheet_ms": 19.93
+      "characters": 4
     },
     {
       "strategy": "cell",
@@ -10324,7 +11038,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.96,
       "row": 4,
+      "detected_row": 4,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": false,
@@ -10339,8 +11056,7 @@
         "0.99": 2
       },
       "character_errors": 2,
-      "characters": 6,
-      "sheet_ms": 19.93
+      "characters": 6
     },
     {
       "strategy": "cell",
@@ -10350,7 +11066,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.96,
       "row": 5,
+      "detected_row": 5,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10371,8 +11090,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 5,
-      "sheet_ms": 19.93
+      "characters": 5
     },
     {
       "strategy": "cell",
@@ -10382,7 +11100,10 @@
       "writer": null,
       "layout": 2,
       "sheet_seed": 44,
+      "sheet_ms": 22.96,
       "row": 6,
+      "detected_row": 6,
+      "alignment": "matched",
       "aligned": true,
       "sku_exact": true,
       "quantity_exact": true,
@@ -10403,8 +11124,7 @@
         "0.99": 0
       },
       "character_errors": 0,
-      "characters": 6,
-      "sheet_ms": 19.93
+      "characters": 6
     }
   ],
   "summary": [
@@ -10413,12 +11133,15 @@
       "split": "development",
       "condition": "blur",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.015151515151515152,
       "exact_sku_rate": 0.9166666666666666,
       "exact_quantity_rate": 1.0,
       "exact_row_rate": 0.9166666666666666,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 19.674000000000003,
+      "mean_sheet_ms": 23.5,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10467,12 +11190,15 @@
       "split": "development",
       "condition": "clean",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.0,
       "exact_sku_rate": 1.0,
       "exact_quantity_rate": 1.0,
       "exact_row_rate": 1.0,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 19.517500000000002,
+      "mean_sheet_ms": 23.4345,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10521,12 +11247,15 @@
       "split": "development",
       "condition": "crossed-out",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.06060606060606061,
       "exact_sku_rate": 1.0,
       "exact_quantity_rate": 0.8333333333333334,
       "exact_row_rate": 0.8333333333333334,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 19.220499999999998,
+      "mean_sheet_ms": 23.4165,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10575,12 +11304,15 @@
       "split": "development",
       "condition": "shadow",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.0,
       "exact_sku_rate": 1.0,
       "exact_quantity_rate": 1.0,
       "exact_row_rate": 1.0,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 19.6405,
+      "mean_sheet_ms": 22.8065,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10629,12 +11361,15 @@
       "split": "development",
       "condition": "skew",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.0,
       "exact_sku_rate": 1.0,
       "exact_quantity_rate": 1.0,
       "exact_row_rate": 1.0,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 30.843499999999995,
+      "mean_sheet_ms": 35.8185,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10683,12 +11418,15 @@
       "split": "held_out",
       "condition": "blur",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.078125,
       "exact_sku_rate": 0.75,
       "exact_quantity_rate": 0.9166666666666666,
       "exact_row_rate": 0.6666666666666666,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 20.6645,
+      "mean_sheet_ms": 24.11075,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10737,12 +11475,15 @@
       "split": "held_out",
       "condition": "clean",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.0967741935483871,
       "exact_sku_rate": 0.6666666666666666,
       "exact_quantity_rate": 0.8333333333333334,
       "exact_row_rate": 0.5,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 20.665,
+      "mean_sheet_ms": 24.330750000000002,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10791,12 +11532,15 @@
       "split": "held_out",
       "condition": "crossed-out",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.203125,
       "exact_sku_rate": 0.75,
       "exact_quantity_rate": 0.6666666666666666,
       "exact_row_rate": 0.5,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 20.3445,
+      "mean_sheet_ms": 23.862000000000002,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10845,12 +11589,15 @@
       "split": "held_out",
       "condition": "shadow",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.1774193548387097,
       "exact_sku_rate": 0.5,
       "exact_quantity_rate": 0.75,
       "exact_row_rate": 0.5,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 20.76,
+      "mean_sheet_ms": 24.085250000000002,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10899,12 +11646,15 @@
       "split": "held_out",
       "condition": "skew",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.15625,
       "exact_sku_rate": 0.6666666666666666,
       "exact_quantity_rate": 0.8333333333333334,
       "exact_row_rate": 0.6666666666666666,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 32.9675,
+      "mean_sheet_ms": 37.3195,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -10953,12 +11703,15 @@
       "split": "development",
       "condition": "blur",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.015151515151515152,
       "exact_sku_rate": 0.9166666666666666,
       "exact_quantity_rate": 1.0,
       "exact_row_rate": 0.9166666666666666,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 21.527,
+      "mean_sheet_ms": 24.272,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11007,12 +11760,15 @@
       "split": "development",
       "condition": "clean",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.0,
       "exact_sku_rate": 1.0,
       "exact_quantity_rate": 1.0,
       "exact_row_rate": 1.0,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 31.272000000000002,
+      "mean_sheet_ms": 34.4535,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11061,12 +11817,15 @@
       "split": "development",
       "condition": "crossed-out",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.06060606060606061,
       "exact_sku_rate": 1.0,
       "exact_quantity_rate": 0.8333333333333334,
       "exact_row_rate": 0.8333333333333334,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 20.5695,
+      "mean_sheet_ms": 23.764,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11115,12 +11874,15 @@
       "split": "development",
       "condition": "shadow",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.0,
       "exact_sku_rate": 1.0,
       "exact_quantity_rate": 1.0,
       "exact_row_rate": 1.0,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 21.4085,
+      "mean_sheet_ms": 24.182499999999997,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11169,12 +11931,15 @@
       "split": "development",
       "condition": "skew",
       "rows": 12,
+      "reference_rows": 12,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.0,
       "exact_sku_rate": 1.0,
       "exact_quantity_rate": 1.0,
       "exact_row_rate": 1.0,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 32.160000000000004,
+      "mean_sheet_ms": 35.477000000000004,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11223,12 +11988,15 @@
       "split": "held_out",
       "condition": "blur",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.078125,
       "exact_sku_rate": 0.75,
       "exact_quantity_rate": 0.9166666666666666,
       "exact_row_rate": 0.6666666666666666,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 22.2765,
+      "mean_sheet_ms": 25.496,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11277,12 +12045,15 @@
       "split": "held_out",
       "condition": "clean",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.0967741935483871,
       "exact_sku_rate": 0.6666666666666666,
       "exact_quantity_rate": 0.8333333333333334,
       "exact_row_rate": 0.5,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 22.258750000000003,
+      "mean_sheet_ms": 25.54725,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11331,12 +12102,15 @@
       "split": "held_out",
       "condition": "crossed-out",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.203125,
       "exact_sku_rate": 0.75,
       "exact_quantity_rate": 0.6666666666666666,
       "exact_row_rate": 0.5,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 21.83075,
+      "mean_sheet_ms": 25.70025,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11385,12 +12159,15 @@
       "split": "held_out",
       "condition": "shadow",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.1774193548387097,
       "exact_sku_rate": 0.5,
       "exact_quantity_rate": 0.75,
       "exact_row_rate": 0.5,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 22.2765,
+      "mean_sheet_ms": 26.378,
       "risk_coverage": [
         {
           "threshold": 0.55,
@@ -11439,12 +12216,15 @@
       "split": "held_out",
       "condition": "skew",
       "rows": 24,
+      "reference_rows": 24,
+      "missing_rows": 0,
+      "extra_rows": 0,
       "character_error_rate": 0.15625,
       "exact_sku_rate": 0.6666666666666666,
       "exact_quantity_rate": 0.8333333333333334,
       "exact_row_rate": 0.6666666666666666,
       "row_alignment_rate": 1.0,
-      "mean_sheet_ms": 34.32125,
+      "mean_sheet_ms": 38.22,
       "risk_coverage": [
         {
           "threshold": 0.55,

@@ -16,12 +16,19 @@ Use Python 3.11–3.13.
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install .
-inventory-digitiser
+inventory-digitiser-setup
 ```
 
-Open <http://127.0.0.1:8010> and choose **Load labelled example**, or upload a PNG, JPEG or WebP up to 10 MB. Accepted sheets have two ruled columns, a header and a final total row. The total cell may be blank. Use the orientation control or select four page corners to correct photos with perspective distortion. The workspace stores original and aligned images and review history locally in `runtime/`.
+Open <http://127.0.0.1:8013>. The first setup downloads checksum-verified MNIST and PenDigits archives and trains both checkpoints locally. Later launches reuse verified weights and start the same conservative review mode. Use `inventory-digitiser` for an immediate offline preview with the bundled baseline on port 8010.
 
-Use Tab and Enter to select a row. The source view highlights both cells and shows the original crops. Approved rows export to JSON or CSV. The JSON lists unresolved rows. CSV preserves the SKU strings on disk. When importing into a spreadsheet, select text for the SKU column so the spreadsheet preserves leading zeros.
+### Review a sheet
+
+1. Choose **Load labelled example** or upload a PNG, JPEG or WebP up to 10 MB. Sheets need two ruled columns, a header and a final total row. The total cell may be blank. Correct orientation or perspective before extraction.
+2. Select a row to inspect its aligned cell crops. The original scan remains available alongside the corrected view. If the models disagree, the UI shows both readings and leaves the disputed field empty. Each new sheet records the model identifiers used.
+3. Correct and approve each count, or exclude a blank, crossed-out or duplicate row with a reason. Any exclusion can be reopened. The app allows one approved row per SKU per sheet. If repeated counts represent distinct stock, reconcile them against the source and record the decision before approving one combined count and excluding the component rows.
+4. Confirm the printed total where available, then export. Filenames and CSV records distinguish **partial**, **unreconciled**, **mismatch** and **reconciled** states. A total mismatch requires explicit confirmation for the current sheet revision. JSON includes unresolved and excluded row IDs, exclusion reasons and model identifiers.
+
+All scans and review history stay in the local workspace under `runtime/` by default. CSV preserves SKU strings on disk. When importing into a spreadsheet, select text for SKU so that leading zeros survive.
 
 ## What the benchmark found
 
@@ -29,7 +36,7 @@ Use Tab and Enter to select a row. The source view highlights both cells and sho
 - **12 of 72 clean rows** passed the simulated review threshold at 0.80, with no errors among those 12. On skewed sheets, two incorrect quantities passed at that same threshold.
 - Synthetic sheets composed entirely of procedural ink are measured separately. The app requires human approval before exporting any record.
 
-See the [evaluation protocol and measured results](docs/evaluation.md) and [data provenance and attribution](docs/data.md).
+The evaluator matches detections by source geometry. Missing reference rows and extra detections both count against accuracy. See the [evaluation protocol and measured results](docs/evaluation.md) and [data provenance and attribution](docs/data.md).
 
 ```sh
 python -m inventory.evaluate --output docs/metrics.json

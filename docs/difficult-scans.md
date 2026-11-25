@@ -40,7 +40,7 @@ Run the same stress command with the standard checkpoint to reproduce the paired
 
 ## Conservative review mode
 
-For difficult scans, use the augmented model as the primary reader and the standard MLP as a cross-check. If the digit readings disagree, the review form shows both readings and leaves the disputed field empty. A scan-quality warning flags every row. Quantities below the cross-check cutoff of 0.99 must be entered from the source crop. The 0.99 value is a screening score, not a calibrated probability.
+Run `inventory-digitiser-setup` for a single-command conservative workspace. It verifies the source files, trains or reuses the weights, and starts the app on port 8013. For difficult scans, use the augmented model as the primary reader and the standard MLP as a cross-check. If the digit readings disagree, the review form shows both readings and leaves the disputed field empty. A scan-quality warning flags every row. Quantities below the cross-check cutoff of 0.99 must be entered from the source crop. The 0.99 value is a screening score, not a calibrated probability.
 
 On the existing 648 cell-first stress observations, this stricter policy left 18 rows unflagged and routed 630 to priority review. No wrong quantities were observed among those 18. All mildly and severely blurred rows were flagged. This is a retrospective check on the same benchmark used to select the policy. Both models can agree on a wrong reading, and human confirmation remains mandatory for every export.
 
