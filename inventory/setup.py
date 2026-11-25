@@ -36,8 +36,13 @@ def prepare_models(directory):
     for path, robust in zip(checkpoints, (False, True)):
         receipt = path.with_suffix(".json")
         if path.is_file() and receipt.is_file():
-            recorded = json.loads(receipt.read_text())
-            if recorded.get("sha256") == digest(path):
+            try:
+                recorded = json.loads(receipt.read_text())
+            except (OSError, ValueError):
+                recorded = {}
+            expected_mode = "degradation-augmented" if robust else "standard"
+            if (isinstance(recorded, dict) and recorded.get("sha256") == digest(path)
+                    and recorded.get("training", {}).get("mode") == expected_mode):
                 continue
         materialise(mnist, MNIST_URL, MNIST_SHA)
         materialise(pen, PEN_URL, PEN_SHA)
