@@ -1,5 +1,7 @@
 # Handwritten Inventory Sheet Digitiser
 
+Portfolio by [Khush Bhavin Maru](https://github.com/Khushx11) · Adelaide University MAAIM.
+
 Turn ruled stocktake sheets into source-linked inventory records. Upload a photo, inspect each recognised SKU and count beside its source crop, then correct and approve the rows you want to export.
 
 ## Watch the workflow
