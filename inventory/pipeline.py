@@ -4,7 +4,7 @@ from .matching import catalogue, suggestions
 from .recognise import cell, printed_total
 
 
-def extract(image, strategy="cell", *, classifier=None):
+def extract(image, strategy="cell", *, classifier=None, recover_touching=False):
     if strategy not in {"cell", "page"}:
         raise ValueError("Choose cell or page recognition.")
     aligned = deskew(image)
@@ -14,7 +14,7 @@ def extract(image, strategy="cell", *, classifier=None):
         read = page_reader(aligned, x, y, classifier)
     else:
         def read(box, expected=None):
-            return cell(aligned, box, expected, classifier)
+            return cell(aligned, box, expected, classifier, recover_touching)
     reference = catalogue()
     rows = []
     for index, (sku_box, count_box) in enumerate(boxes, 1):
@@ -34,6 +34,8 @@ def reasons(row, items, cutoff):
         result.append("Unknown or ambiguous SKU")
     for key, name in (("sku", "SKU"), ("count", "Quantity")):
         field = row[key]
+        if field.get("segmentation_suggestion"):
+            result.append(f"{name} touching-digit suggestion needs review")
         if field.get("model_disagreement"):
             result.append(f"{name} model disagreement")
         if field["state"] != "recognised":

@@ -9,6 +9,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 from .grid import cell_boxes, detect, ink
 from .training import training_glyphs
+from .segmentation import enhanced_mask, split_sequence
 
 
 def glyph(mask):
@@ -83,19 +84,34 @@ def recognise(parts, *, width, expected=None, classifier=None):
     return result
 
 
-def cell(image, box, expected=None, classifier=None):
+def cell(image, box, expected=None, classifier=None, recover_touching=False):
     crop = image.crop(box)
     parts = components(ink(crop))
     if parts:
-        return recognise(parts, width=crop.width, expected=expected, classifier=classifier)
-    faint = ink(crop, relaxed=True)
-    if faint.sum() < 18:
-        return {"raw": "", "confidence": 0.0, "state": "blank"}
-    recovered = recognise(components(faint), width=crop.width, expected=expected, classifier=classifier)
-    if recovered["state"] == "blank":
-        recovered["state"] = "unreadable"
-    recovered["confidence"] = min(recovered["confidence"], 0.5)
-    return recovered
+        result = recognise(parts, width=crop.width, expected=expected, classifier=classifier)
+    else:
+        faint = ink(crop, relaxed=True)
+        if faint.sum() < 18:
+            result = {"raw": "", "confidence": 0.0, "state": "blank"}
+        else:
+            result = recognise(components(faint), width=crop.width, expected=expected, classifier=classifier)
+            if result["state"] == "blank":
+                result["state"] = "unreadable"
+            result["confidence"] = min(result["confidence"], 0.5)
+    if not recover_touching or result["state"] != "unreadable" or expected is None:
+        return result
+    if not parts or any(right-left > 2.4*(bottom-top) for left, top, right, bottom, _ in parts):
+        return result
+    primary = classifier or model()
+    paths = [split_sequence(mask, expected, glyph, primary)
+             for mask in (ink(crop, relaxed=True), enhanced_mask(crop))]
+    candidates = [path for path in paths if path is not None and path[2] >= 0.45]
+    if candidates:
+        _, proposal, minimum = max(candidates)
+        # Preserve the primary OCR and never present the hypothesis as an approved read.
+        result["segmentation_suggestion"] = proposal
+        result["segmentation_score"] = round(minimum, 5)
+    return result
 
 @lru_cache(maxsize=1)
 def printed_model():
