@@ -101,30 +101,30 @@ function display() {
   $('original').href = base() + '/original';
   $('download-json').href = base() + '/json';
   $('download-csv').href = base() + '/csv';
-  const {unresolved, approved_sum, stated_total, difference} = reconciliation;
+  const {unresolved, approved_sum, stated_total, difference, excluded} = reconciliation;
   const sum = stated_total === null ? 'Printed total unconfirmed' : `${reconciliation.total_source === 'reviewed' ? 'Confirmed' : 'OCR'} total ${stated_total}`;
   $('total').value = report.verified_total ?? report.total.raw;
   const diff = difference === null ? '' : ` · Difference ${difference}`;
-  $('stats').textContent = `${unresolved} unresolved · Approved sum ${approved_sum} · ${sum}${diff}`;
+  $('stats').textContent = `${unresolved} unresolved · ${excluded} excluded · Approved sum ${approved_sum} · ${sum}${diff} · Export: ${current.export_status}`;
   $('history').replaceChildren(...report.history.map(event => {
     if (event.action === 'confirm-total') {
       return node('li', `Printed total confirmed as ${event.after} · ${event.time}`);
     }
-    const value = event.after ? `${event.after.sku}, ${event.after.quantity}` : 'unresolved';
+    const value = event.after?.exclusion_reason ?? (event.after ? `${event.after.sku}, ${event.after.quantity}` : 'unresolved');
     return node('li', `Row ${event.row} · ${event.action} · ${value} · ${event.time}`);
   }));
   renderRows();
   inspect();
 }
 function renderRows() {
-  const rows = current.report.rows.filter(row => !$('flagged').checked || (row.flags.length && !row.verified));
+  const rows = current.report.rows.filter(row => !$('flagged').checked || (row.flags.length && !row.verified && !row.exclusion_reason));
   $('rows').replaceChildren(...rows.map(row => {
     const button = node('button');
     button.className = 'row-button';
     button.setAttribute('aria-pressed', row.id === selected);
     const value = row.verified || {sku: row.sku.raw || '—', quantity: row.count.raw || row.count.state};
     button.append(node('strong', `Row ${row.id} · ${value.sku}`));
-    const state = node('span', `${value.quantity} · ${row.verified ? 'Approved' : row.flags.join(', ') || 'Needs approval'}`);
+    const state = node('span', `${value.quantity} · ${row.verified ? 'Approved' : row.exclusion_reason ? 'Excluded' : row.flags.join(', ') || 'Needs approval'}`);
     state.className = row.flags.length && !row.verified ? 'state flag' : 'state';
     button.append(state);
     button.addEventListener('click', () => {
@@ -182,7 +182,8 @@ function inspect() {
   $('model-comparison').textContent = differences.map(([label, field]) =>
     `${label}: primary read ${field.raw}, comparison read ${field.comparison_raw}. Check the source crop.`
   ).join(' ');
-  $('reopen').disabled = !row.verified;
+  $('reopen').disabled = !row.verified && !row.exclusion_reason;
+  $('exclusion-reason').value = row.exclusion_reason ?? '';
   $('suggestions').replaceChildren(...row.suggestions.map(sku => {
     const button = node('button', `Use ${sku} · ${current.report.catalogue.items[sku]}`);
     button.type = 'button';
@@ -199,21 +200,34 @@ async function change(action) {
   try {
     current = await post(base() + '/review', {
       row: selected, revision: current.report.revision ?? 0,
-      sku: $('sku').value.trim(), quantity: $('quantity').value.trim(), action,
+      sku: $('sku').value.trim(), quantity: $('quantity').value.trim(),
+      reason: $('exclusion-reason').value.trim(), action,
     });
     display();
-    $('review-status').textContent = action === 'approve' ? 'Row approved.' : 'Row reopened.';
+    $('review-status').textContent = {approve: 'Row approved.', reopen: 'Row reopened.', exclude: 'Row excluded.'}[action];
   } catch (error) {
     $('review-status').textContent = error.message;
   } finally {
     buttons.forEach(button => { button.disabled = false; });
-    $('reopen').disabled = !activeRow()?.verified;
+    $('reopen').disabled = !activeRow()?.verified && !activeRow()?.exclusion_reason;
   }
 }
 $('review').addEventListener('submit', event => {
   event.preventDefault();
   change('approve');
 });
+for (const format of ['json', 'csv']) {
+  $('download-' + format).addEventListener('click', event => {
+    if (current.export_status !== 'mismatch') return;
+    event.preventDefault();
+    if (window.confirm(`The approved sum differs from the stated total by ${current.reconciliation.difference}. Export this mismatched revision?`)) {
+      const link = node('a');
+      link.href = base() + '/' + format + '?confirm_revision=' + encodeURIComponent(current.report.revision ?? 0);
+      link.click();
+    }
+  });
+}
+$('exclude').addEventListener('click', () => change('exclude'));
 $('reopen').addEventListener('click', () => change('reopen'));
 $('total-form').addEventListener('submit', async event => {
   event.preventDefault();

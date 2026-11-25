@@ -62,10 +62,17 @@ def run(url, record):
         with page.expect_download() as download:
             page.get_by_role("link", name="Export CSV").click()
         rows = list(csv.DictReader(StringIO(download.value.path().read_text())))
-        assert rows == [{"row": "4", "sku": "0642", "quantity": "13"}], rows
+        assert download.value.suggested_filename == "stocktake-partial.csv"
+        assert len(rows) == 1 and rows[0]["export_status"] == "partial", rows
+        assert [rows[0][key] for key in ("row", "sku", "quantity")] == ["4", "0642", "13"], rows
+        if not record:
+            page.get_by_role("button", name="Row 3", exact=False).click()
+            page.get_by_label("Exclusion reason").fill("Blank line confirmed against source")
+            page.get_by_role("button", name="Exclude row").click()
+            expect(page.get_by_text("Row excluded.", exact=True)).to_be_visible()
         caption(page, "Export contains the approved count. Unresolved rows remain visible in the workspace and JSON export.", 15, record)
         page.reload()
-        expect(page.get_by_text("5 unresolved", exact=False)).to_be_visible()
+        expect(page.get_by_text("5 unresolved" if record else "4 unresolved", exact=False)).to_be_visible()
         expect(page.get_by_text("Confirmed total 80", exact=False)).to_be_visible()
         if not record:
             page.get_by_label("Example condition").select_option("heavy-blur")

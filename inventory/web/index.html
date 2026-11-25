@@ -62,6 +62,8 @@
               <label>Quantity<input id="quantity" inputmode="numeric" pattern="[0-9]{1,6}" required></label></div>
             <div id="suggestions"></div>
             <div class="toolbar"><button type="submit" class="primary">Approve row</button><button type="button" id="reopen">Reopen row</button></div>
+            <label>Exclusion reason<input id="exclusion-reason" maxlength="240" placeholder="For example, duplicate entry or crossed out"></label>
+            <button type="button" id="exclude">Exclude row</button>
             <p id="review-status" role="status"></p>
           </form>
           <details><summary>Approval history</summary><ol id="history"></ol></details>
