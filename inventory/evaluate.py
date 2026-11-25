@@ -28,11 +28,11 @@ def evaluate():
             "thresholds":list(CUTOFFS),"rows":records,"summary":summarise(records)}
 
 
-def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=None):
+def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=None, classifier=None):
     records = []
     start = perf_counter()
     try:
-        _, result = extract(image, strategy)
+        _, result = extract(image, strategy, classifier=classifier)
     except ValueError:
         result = {"rows": [], "catalogue": {"items": {}}}
     duration = (perf_counter()-start)*1000

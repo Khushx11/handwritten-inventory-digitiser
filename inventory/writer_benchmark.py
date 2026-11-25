@@ -59,7 +59,7 @@ def renderer(samples):
     return draw_digit
 
 
-def evaluate_writers(archive):
+def evaluate_writers(archive, classifier=None):
     digest = hashlib.sha256(archive.read_bytes()).hexdigest()
     if digest != ARCHIVE_SHA256:
         raise ValueError("The UCI archive does not match the evaluated release checksum.")
@@ -76,7 +76,7 @@ def evaluate_writers(archive):
                     seed = index * 1000 + offset
                     image, truth = sheet(seed, layout=layout, stress=stress, digit_renderer=draw)
                     for strategy in ("page", "cell"):
-                        results.extend(measure_sheet(image, truth, strategy, split, None, layout, seed, writer))
+                        results.extend(measure_sheet(image, truth, strategy, split, None, layout, seed, writer, classifier))
     return {
         "dataset": "UCI UJI Pen Characters (V1) digit strokes composited onto synthetic sheets.",
         "archive_sha256": digest,
@@ -91,5 +91,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("archive", type=Path)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--model", type=Path, help="Optional numeric MLP weights")
     args = parser.parse_args()
-    args.output.write_text(json.dumps(evaluate_writers(args.archive), indent=2, allow_nan=False) + "\n")
+    from .portable_model import PortableMLP
+    classifier = PortableMLP(args.model) if args.model else None
+    args.output.write_text(json.dumps(evaluate_writers(args.archive, classifier), indent=2, allow_nan=False) + "\n")

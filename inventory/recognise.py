@@ -75,9 +75,9 @@ def recognise(parts, *, width, expected=None, classifier=None):
     return {"raw": raw, "confidence": round(confidence, 5), "state": state}
 
 
-def cell(image, box, expected=None):
+def cell(image, box, expected=None, classifier=None):
     crop = image.crop(box)
-    return recognise(components(ink(crop)), width=crop.width, expected=expected)
+    return recognise(components(ink(crop)), width=crop.width, expected=expected, classifier=classifier)
 
 @lru_cache(maxsize=1)
 def printed_model():

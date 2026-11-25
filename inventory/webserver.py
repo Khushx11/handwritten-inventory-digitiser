@@ -29,7 +29,7 @@ def png(image):
     return stream.getvalue()
 
 
-def handler_for(store):
+def handler_for(store, classifier=None):
     class Handler(BaseHTTPRequestHandler):
         def send(self, content, kind, status=HTTPStatus.OK, filename=None):
             self.send_response(status)
@@ -94,7 +94,7 @@ def handler_for(store):
                         raise ValueError("Unsupported rotation.")
                     working = rectify(original, data["corners"]) if data.get("corners") else original
                     working = working.rotate(rotation, expand=True) if rotation else working
-                    aligned, report = extract(working, data.get("strategy", "cell"))
+                    aligned, report = extract(working, data.get("strategy", "cell"), classifier=classifier)
                     sheet_id = store.add(aligned, prepare(report), original=original)
                     self.json(self.report(sheet_id, store.get(sheet_id)), HTTPStatus.CREATED)
                 elif (match := SHEET.fullmatch(self.path)) and match[2] == "review":
@@ -113,8 +113,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8010)
     parser.add_argument("--workspace", type=Path, default=Path("runtime"))
+    parser.add_argument("--model", type=Path, help="Optional locally trained numeric MLP weights")
     args = parser.parse_args()
-    with ThreadingHTTPServer(("127.0.0.1", args.port), handler_for(Store(args.workspace))) as server:
+    from .portable_model import PortableMLP
+    classifier = PortableMLP(args.model) if args.model else None
+    with ThreadingHTTPServer(("127.0.0.1", args.port), handler_for(Store(args.workspace), classifier)) as server:
         print(f"Open http://127.0.0.1:{server.server_port}", flush=True)
         try:
             server.serve_forever()

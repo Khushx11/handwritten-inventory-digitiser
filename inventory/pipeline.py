@@ -4,13 +4,17 @@ from .matching import catalogue, suggestions
 from .recognise import cell, printed_total
 
 
-def extract(image, strategy="cell"):
+def extract(image, strategy="cell", *, classifier=None):
     if strategy not in {"cell", "page"}:
         raise ValueError("Choose cell or page recognition.")
     aligned = deskew(image)
     x, y = detect(aligned)
     boxes, total_box = cell_boxes(x, y)
-    read = page_reader(aligned, x, y) if strategy == "page" else lambda box, expected=None: cell(aligned, box, expected)
+    if strategy == "page":
+        read = page_reader(aligned, x, y, classifier)
+    else:
+        def read(box, expected=None):
+            return cell(aligned, box, expected, classifier)
     reference = catalogue()
     rows = []
     for index, (sku_box, count_box) in enumerate(boxes, 1):
