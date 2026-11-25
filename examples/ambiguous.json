@@ -1,0 +1,38 @@
+{
+  "rows": [
+    {
+      "sku": "0074",
+      "quantity": "0",
+      "crossed_out": false
+    },
+    {
+      "sku": "0146",
+      "quantity": "30",
+      "crossed_out": false
+    },
+    {
+      "sku": "0012",
+      "quantity": "",
+      "crossed_out": false
+    },
+    {
+      "sku": "0642",
+      "quantity": "13",
+      "crossed_out": true
+    },
+    {
+      "sku": "0217",
+      "quantity": "6",
+      "crossed_out": false
+    },
+    {
+      "sku": "0017",
+      "quantity": "31",
+      "crossed_out": false
+    }
+  ],
+  "printed_total": 80,
+  "style": 0,
+  "layout": 0,
+  "stress": "crossed-out"
+}
