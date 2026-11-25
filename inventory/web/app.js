@@ -54,7 +54,7 @@ $('upload').addEventListener('submit', event => {
 $('example').addEventListener('click', async () => {
   $('example').disabled = true;
   try {
-    const response = await fetch('/api/example');
+    const response = await fetch('/api/example/' + encodeURIComponent($('example-condition').value));
     if (!response.ok) throw new Error('Unable to load the example.');
     $('file').value = '';
     $('rotation').value = '0';

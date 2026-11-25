@@ -52,7 +52,7 @@ def sheet(seed=1, style=0, layout=0, stress=None, digit_renderer=None):
                 points = [(round(x+2*(a+b*slant)+rng.uniform(-0.7,0.7)),
                            round(y+1.38*b+rng.uniform(-0.9,0.9))) for a,b in stroke]
                 draw.line(points, fill="#1a3043", width=4+(style % 2), joint="curve")
-            x += 38 + rng.randint(-1, 2)
+            x += (22 if stress == "crowded" else 38) + rng.randint(-1, 2)
         if crossed and text:
             draw.line((start-7,y+11,x,y+21), fill="#24343b", width=5)
 

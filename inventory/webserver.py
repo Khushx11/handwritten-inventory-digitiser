@@ -22,6 +22,7 @@ ASSETS = {"/": ("index.html", "text/html"), "/app.js": ("app.js", "text/javascri
           "/style.css": ("style.css", "text/css")}
 SHEET = re.compile(r"/api/sheets/([a-f0-9]{32})(?:/(image|original|review|json|csv))?")
 LIMIT = 15_000_000
+EXAMPLES = {"crossed-out", "blur", "heavy-blur", "faint", "crowded", "shadow", "low-resolution"}
 
 
 def png(image):
@@ -57,6 +58,11 @@ def handler_for(store, classifier=None):
                     self.send(files("inventory").joinpath("web", name).read_bytes(), content_type+"; charset=utf-8")
                 elif self.path == "/api/example":
                     self.send(png(sheet(stress="crossed-out")[0]), "image/png")
+                elif self.path.startswith("/api/example/"):
+                    condition = self.path.removeprefix("/api/example/")
+                    if condition not in EXAMPLES:
+                        raise KeyError("Example not found.")
+                    self.send(png(sheet(stress=condition)[0]), "image/png")
                 elif match := SHEET.fullmatch(self.path):
                     sheet_id, action = match.groups()
                     report = store.get(sheet_id)

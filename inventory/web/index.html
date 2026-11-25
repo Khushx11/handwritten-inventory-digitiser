@@ -16,6 +16,15 @@
         <label>Orientation<select id="rotation"><option value="0">As uploaded</option><option value="90">90° left</option><option value="180">180°</option><option value="270">90° right</option></select></label>
         <label>Recognition method<select id="strategy"><option value="cell">Cell-first</option><option value="page">Page-first baseline</option></select></label>
         <button type="submit" class="primary" id="process">Extract counts</button>
+        <label>Example condition<select id="example-condition">
+          <option value="crossed-out">Crossed-out count</option>
+          <option value="blur">Blurred photo</option>
+          <option value="heavy-blur">Severely blurred photo</option>
+          <option value="faint">Faint handwriting</option>
+          <option value="crowded">Crowded digits</option>
+          <option value="shadow">Uneven lighting</option>
+          <option value="low-resolution">Low resolution</option>
+        </select></label>
         <button type="button" id="example">Load labelled example</button>
       </form>
       <details id="perspective" hidden><summary>Correct perspective with four corners</summary>
