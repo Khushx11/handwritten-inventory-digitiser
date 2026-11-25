@@ -1,0 +1,22 @@
+name: Inventory checks
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install .
+      - run: python -m unittest discover -s tests -v
+      - run: node --check inventory/web/app.js
+      - run: python -m inventory.evaluate --output /tmp/inventory-metrics.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-stocktake-metrics-py${{ matrix.python }}
+          path: /tmp/inventory-metrics.json
