@@ -1,0 +1,45 @@
+name: Additional handwriting evaluation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - inventory/extra_datasets.py
+      - inventory/extra_training.py
+      - inventory/portable_model.py
+      - .github/workflows/additional-handwriting.yml
+permissions:
+  contents: read
+jobs:
+  train-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      LOKY_MAX_CPU_COUNT: '4'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - run: python -m pip install .
+      - name: Download official datasets
+        run: |
+          mkdir -p runtime
+          curl -fsSL --retry 3 'https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz' -o runtime/mnist.npz
+          curl -fsSL --retry 3 'https://archive.ics.uci.edu/static/public/81/pen+based+recognition+of+handwritten+digits.zip' -o runtime/pendigits.zip
+          curl -fsSL --retry 3 'https://archive.ics.uci.edu/static/public/160/uji+pen+characters.zip' -o runtime/uji-pen.zip
+      - name: Train and score official test partitions
+        run: |
+          python -m inventory.extra_training --mnist runtime/mnist.npz --pendigits runtime/pendigits.zip \
+            --output runtime/digit-metrics.json --weights runtime/handwriting-mlp.npz
+      - name: Score transfer on held-out UJI writers
+        run: |
+          python -m inventory.writer_benchmark runtime/uji-pen.zip --model runtime/handwriting-mlp.npz \
+            --output runtime/writer-metrics.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: additional-handwriting-metrics
+          path: |
+            runtime/digit-metrics.json
+            runtime/writer-metrics.json

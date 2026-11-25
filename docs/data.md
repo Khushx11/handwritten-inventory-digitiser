@@ -15,6 +15,6 @@ The digit classifier also uses the small optical digits dataset bundled in sciki
 ## Additional digit benchmarks
 
 - [MNIST](https://keras.io/api/datasets/mnist/), by Yann LeCun, Corinna Cortes and collaborators, uses the documented 60,000 training images and 10,000 test images. Keras identifies the dataset licence as CC BY-SA 3.0.
-- [Pen-Based Recognition of Handwritten Digits](https://doi.org/10.24432/C5MG62), by Fevzi Alimoglu and Ethem Alpaydin, is distributed by UCI under CC BY 4.0. The official files provide 7,494 training trajectories and 3,498 test trajectories from separate groups of writers. Sequences of eight points are drawn into raster masks before classification.
+- [Pen-Based Recognition of Handwritten Digits](https://archive.ics.uci.edu/dataset/81/pen%2Bbased%2Brecognition%2Bof%2Bhandwritten%2Bdigits), by Fevzi Alimoglu and Ethem Alpaydin, is distributed by UCI under CC BY 4.0. The official files provide 7,494 training trajectories and 3,498 test trajectories from separate groups of writers. Sequences of eight points are drawn into raster masks before classification.
 
 The archives are downloaded from their sources and verified against pinned SHA-256 hashes. They are not included in this repository. The training command writes a local numeric checkpoint. The reported MLP uses only the training partitions for fitting and internal validation. The UJI evaluation then tests transfer to a third dataset in composite stocktake sheets.
