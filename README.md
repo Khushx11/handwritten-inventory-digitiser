@@ -2,6 +2,12 @@
 
 Turn ruled stocktake sheets into source-linked inventory records. Upload a photo, inspect each recognised SKU and count beside its source crop, then correct and approve the rows you want to export.
 
+## Watch the workflow
+
+[66-second captioned walkthrough](https://raw.githubusercontent.com/Khushx11/handwritten-inventory-digitiser/main/docs/demo/walkthrough.mp4)
+
+[![Reviewing an unreadable count against its source crop](docs/demo/preview.png)](https://raw.githubusercontent.com/Khushx11/handwritten-inventory-digitiser/main/docs/demo/walkthrough.mp4)
+
 ## Run locally
 
 Use Python 3.11–3.13.
