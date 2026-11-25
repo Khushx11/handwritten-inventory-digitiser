@@ -55,6 +55,9 @@ def run(url, record):
         caption(page, "A reviewer confirms the correct count before approving it. The system retains the original OCR reading.", 12, record)
         page.get_by_role("button", name="Approve row").click()
         expect(page.get_by_text("Row approved.", exact=True)).to_be_visible()
+        page.get_by_label("Printed total", exact=True).fill("80")
+        page.get_by_role("button", name="Confirm total", exact=True).click()
+        expect(page.get_by_text("Confirmed total 80", exact=False)).to_be_visible()
         page.get_by_role("link", name="Export CSV").scroll_into_view_if_needed()
         with page.expect_download() as download:
             page.get_by_role("link", name="Export CSV").click()
@@ -63,6 +66,7 @@ def run(url, record):
         caption(page, "Export contains the approved count. Unresolved rows remain visible in the workspace and JSON export.", 15, record)
         page.reload()
         expect(page.get_by_text("5 unresolved", exact=False)).to_be_visible()
+        expect(page.get_by_text("Confirmed total 80", exact=False)).to_be_visible()
         video = page.video
         context.close()
         if record and video:
