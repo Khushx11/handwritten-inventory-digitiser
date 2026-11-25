@@ -7,17 +7,17 @@ Turn ruled stocktake sheets into source-linked inventory records. Upload a photo
 
 ## Review a row against its source
 
-[![Stocktake workspace showing an unreadable count beside its source crop](docs/demo/preview.png)](https://raw.githubusercontent.com/Khushx11/handwritten-inventory-digitiser/main/docs/demo/walkthrough.mp4)
+Load a labelled stocktake sheet, inspect a source crop, and review the row before export.
+
+[Watch the 15-second captioned walkthrough](https://raw.githubusercontent.com/Khushx11/handwritten-inventory-digitiser/main/docs/demo/walkthrough.mp4)
+
+[![Handwritten Inventory Sheet Digitiser displaying a selected row and its source crops](docs/demo/preview.png)](https://raw.githubusercontent.com/Khushx11/handwritten-inventory-digitiser/main/docs/demo/walkthrough.mp4)
 
 | What the reviewer sees | What to check before export |
 | --- | --- |
 | Recognised SKU and count | Compare both values with the linked source crop. |
 | Unreadable or incorrect count | Correct the row from the source when the value is legible. |
 | Approved rows | Export the reviewed records as CSV or JSON. |
-
-[Watch the 66-second walkthrough](https://raw.githubusercontent.com/Khushx11/handwritten-inventory-digitiser/main/docs/demo/walkthrough.mp4).
-
-The recorded walkthrough shows the earlier workspace layout. The current version uses the same source-linked review and export workflow.
 
 ## Run locally
 
