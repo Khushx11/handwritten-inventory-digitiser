@@ -59,12 +59,15 @@ def renderer(samples):
     return draw_digit
 
 
-def evaluate_writers(archive, classifier=None):
+def evaluate_writers(archive, classifier=None, extended=False):
     digest = hashlib.sha256(archive.read_bytes()).hexdigest()
     if digest != ARCHIVE_SHA256:
         raise ValueError("The UCI archive does not match the evaluated release checksum.")
     model()
     results = []
+    conditions = (None, "blur", "shadow", "skew", "crossed-out")
+    if extended:
+        conditions += ("heavy-blur", "faint", "low-resolution", "crowded")
     with ZipFile(archive) as source:
         for index in range(1, 12):
             writer = f"w{index:02d}"
@@ -72,8 +75,8 @@ def evaluate_writers(archive, classifier=None):
             samples = parse_writer(source.read(f"UJIpenchars-{writer}").decode("latin-1"))
             draw = renderer(samples)
             for layout in (0,) if split == "development" else (1, 2):
-                for offset, stress in enumerate((None, "blur", "shadow", "skew", "crossed-out")):
-                    seed = index * 1000 + offset
+                for offset, stress in enumerate(conditions):
+                    seed = index * 1000 + (0 if extended else offset)
                     image, truth = sheet(seed, layout=layout, stress=stress, digit_renderer=draw)
                     for strategy in ("page", "cell"):
                         results.extend(measure_sheet(image, truth, strategy, split, None, layout, seed, writer, classifier))
@@ -92,7 +95,8 @@ if __name__ == "__main__":
     parser.add_argument("archive", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--model", type=Path, help="Optional numeric MLP weights")
+    parser.add_argument("--extended-stress", action="store_true")
     args = parser.parse_args()
     from .portable_model import PortableMLP
     classifier = PortableMLP(args.model) if args.model else None
-    args.output.write_text(json.dumps(evaluate_writers(args.archive, classifier), indent=2, allow_nan=False) + "\n")
+    args.output.write_text(json.dumps(evaluate_writers(args.archive, classifier, args.extended_stress), indent=2, allow_nan=False) + "\n")

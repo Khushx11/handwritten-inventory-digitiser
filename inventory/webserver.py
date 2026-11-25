@@ -13,6 +13,7 @@ import re
 from .export import as_csv, records
 from .fixtures import sheet
 from .geometry import decode, rectify
+from .image_quality import assess
 from .pipeline import extract
 from .review import prepare, reconcile
 from .store import Store
@@ -94,7 +95,14 @@ def handler_for(store, classifier=None):
                         raise ValueError("Unsupported rotation.")
                     working = rectify(original, data["corners"]) if data.get("corners") else original
                     working = working.rotate(rotation, expand=True) if rotation else working
-                    aligned, report = extract(working, data.get("strategy", "cell"), classifier=classifier)
+                    quality = assess(working)
+                    try:
+                        aligned, report = extract(working, data.get("strategy", "cell"), classifier=classifier)
+                    except ValueError as error:
+                        if quality["warnings"]:
+                            raise ValueError(f"{error} {' '.join(quality['warnings'])}") from error
+                        raise
+                    report["scan_quality"] = quality
                     sheet_id = store.add(aligned, prepare(report), original=original)
                     self.json(self.report(sheet_id, store.get(sheet_id)), HTTPStatus.CREATED)
                 elif (match := SHEET.fullmatch(self.path)) and match[2] == "review":

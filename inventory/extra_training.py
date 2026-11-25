@@ -8,8 +8,10 @@ from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from sklearn.neural_network import MLPClassifier
 from threadpoolctl import threadpool_limits
 
+from .augmentation import degraded_examples
 from .extra_datasets import MNIST_SHA, MNIST_URL, PEN_SHA, PEN_URL, mnist, pendigits
 from .recognise import glyph, model
+from .training import training_glyphs
 
 
 def features(images):
@@ -25,7 +27,7 @@ def score(labels, predicted):
     }
 
 
-def run(mnist_path, pen_path, output, weights):
+def run(mnist_path, pen_path, output, weights, robust=False):
     datasets = {"mnist": mnist(mnist_path), "pendigits": pendigits(pen_path)}
     transformed = {
         name: {partition: (features(images), labels) for partition, (images, labels) in data.items()}
@@ -34,7 +36,19 @@ def run(mnist_path, pen_path, output, weights):
     train = [data["train"] for data in transformed.values()]
     x_train = np.concatenate([x for x, _ in train])
     y_train = np.concatenate([y for _, y in train])
-    classifier = MLPClassifier(hidden_layer_sizes=(128, 64), max_iter=40, early_stopping=True,
+    augmented_count = 0
+    if robust:
+        augmented = [
+            degraded_examples(*datasets[name]["train"], count, seed)
+            for name, count, seed in (("mnist", 14000, 41), ("pendigits", 5000, 42))
+        ]
+        handwriting = list(training_glyphs())
+        augmented.append((features([mask for mask, _ in handwriting]),
+                          np.asarray([digit for _, digit in handwriting])))
+        augmented_count = sum(len(y) for _, y in augmented)
+        x_train = np.concatenate([x_train, *(x for x, _ in augmented)])
+        y_train = np.concatenate([y_train, *(y for _, y in augmented)])
+    classifier = MLPClassifier(hidden_layer_sizes=(128, 64), max_iter=40, early_stopping=not robust,
                                validation_fraction=0.10, batch_size=256, random_state=42)
     baseline = model()
     with threadpool_limits(limits=4):
@@ -53,7 +67,13 @@ def run(mnist_path, pen_path, output, weights):
         for i, array in enumerate(arrays)
     })
     report = {
-        "model": "MLP 128/64 ReLU, seed 42, early stopping on training-only validation",
+        "model": "MLP 128/64 ReLU, seed 42",
+        "training": {
+            "mode": "degradation-augmented" if robust else "standard",
+            "augmented_or_domain_rows": augmented_count,
+            "total_rows": len(y_train),
+            "validation": "fixed epoch budget" if robust else "training-only early stopping",
+        },
         "evaluation": "Official held-out test partitions scored separately; no test rows used for fitting.",
         "input_sources": {
             "mnist": {"url": MNIST_URL, "sha256": MNIST_SHA},
@@ -71,5 +91,6 @@ if __name__ == "__main__":
     parser.add_argument("--pendigits", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--weights", required=True, type=Path)
+    parser.add_argument("--robust", action="store_true", help="Train with extra degraded training glyphs")
     args = parser.parse_args()
-    run(args.mnist, args.pendigits, args.output, args.weights)
+    run(args.mnist, args.pendigits, args.output, args.weights, args.robust)

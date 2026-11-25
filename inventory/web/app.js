@@ -93,6 +93,9 @@ const base = () => `/api/sheets/${current.sheet}`;
 function display() {
   const {report, reconciliation} = current;
   $('workspace').hidden = false;
+  const warnings = report.scan_quality?.warnings ?? [];
+  $('scan-warnings').replaceChildren(...warnings.map(warning => node('li', warning)));
+  $('scan-warnings').hidden = !warnings.length;
   const source = base() + '/image';
   if ($('sheet').getAttribute('src') !== source) $('sheet').src = source;
   $('original').href = base() + '/original';

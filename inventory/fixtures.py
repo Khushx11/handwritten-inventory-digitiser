@@ -46,7 +46,7 @@ def sheet(seed=1, style=0, layout=0, stress=None, digit_renderer=None):
         for digit in text:
             if digit_renderer is not None:
                 digit_renderer(draw, digit, x, y, rng)
-                x += 38
+                x += 22 if stress == "crowded" else 38
                 continue
             for stroke in STROKES[digit]:
                 points = [(round(x+2*(a+b*slant)+rng.uniform(-0.7,0.7)),
@@ -63,6 +63,12 @@ def sheet(seed=1, style=0, layout=0, stress=None, digit_renderer=None):
     draw.text((middle+45,top+(len(rows)+1)*step+15),str(total),font_size=31,fill="#24343b")
     if stress == "blur":
         image = image.filter(ImageFilter.GaussianBlur(1.6))
+    elif stress == "heavy-blur":
+        image = image.filter(ImageFilter.GaussianBlur(3.0))
+    elif stress == "faint":
+        image = Image.blend(image, Image.new("RGB", image.size, "#fffdf4"), 0.48)
+    elif stress == "low-resolution":
+        image = image.resize((width // 3, height // 3), Image.Resampling.BOX).resize(image.size, Image.Resampling.BILINEAR)
     elif stress == "skew":
         image = image.rotate(5, resample=Image.Resampling.BICUBIC, fillcolor="#fdfcf8")
     elif stress == "shadow":
