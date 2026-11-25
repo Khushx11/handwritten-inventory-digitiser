@@ -10,12 +10,12 @@ def extract(image, strategy="cell", *, classifier=None, recover_touching=False):
     aligned = deskew(image)
     x, y = detect(aligned)
     boxes, total_box = cell_boxes(x, y)
+    reference = catalogue()
     if strategy == "page":
         read = page_reader(aligned, x, y, classifier)
     else:
         def read(box, expected=None):
-            return cell(aligned, box, expected, classifier, recover_touching)
-    reference = catalogue()
+            return cell(aligned, box, expected, classifier, recover_touching, reference["items"] if expected else None)
     rows = []
     for index, (sku_box, count_box) in enumerate(boxes, 1):
         sku = read(sku_box, 4)

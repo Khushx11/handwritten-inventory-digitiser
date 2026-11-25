@@ -84,7 +84,7 @@ def recognise(parts, *, width, expected=None, classifier=None):
     return result
 
 
-def cell(image, box, expected=None, classifier=None, recover_touching=False):
+def cell(image, box, expected=None, classifier=None, recover_touching=False, known=None):
     crop = image.crop(box)
     parts = components(ink(crop))
     if parts:
@@ -103,9 +103,9 @@ def cell(image, box, expected=None, classifier=None, recover_touching=False):
     if not parts or any(right-left > 2.4*(bottom-top) for left, top, right, bottom, _ in parts):
         return result
     primary = classifier or model()
-    paths = [split_sequence(mask, expected, glyph, primary)
+    paths = [split_sequence(mask, expected, glyph, primary, known)
              for mask in (ink(crop, relaxed=True), enhanced_mask(crop))]
-    candidates = [path for path in paths if path is not None and path[2] >= 0.45]
+    candidates = [path for path in paths if path is not None and path[2] >= (0.15 if known else 0.45)]
     if candidates:
         _, proposal, minimum = max(candidates)
         # Preserve the primary OCR and never present the hypothesis as an approved read.

@@ -187,7 +187,7 @@ function inspect() {
     `${label}: primary read ${field.raw}, comparison read ${field.comparison_raw}. Check the source crop.`
   );
   if (row.sku.segmentation_suggestion) {
-    notes.push(`Touching-digit SKU suggestion: ${row.sku.segmentation_suggestion}. Verify each digit from the source crop.`);
+    notes.push(`Catalogue SKU suggested from touching digits: ${row.sku.segmentation_suggestion}. Verify each digit from the source crop.`);
   }
   $('model-comparison').textContent = notes.join(' ');
   $('reopen').disabled = !row.verified && !row.exclusion_reason;
