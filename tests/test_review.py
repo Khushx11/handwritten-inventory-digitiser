@@ -38,3 +38,11 @@ class ReviewTests(unittest.TestCase):
         self.assertIsNone(reconcile(data)["difference"])
         approve(data, second, "0017", "4")
         self.assertEqual(reconcile(data)["difference"], 4)
+
+    def test_scan_warning_routes_even_high_confidence_rows_to_review(self):
+        data = report()
+        data["quality_gate"] = True
+        data["scan_quality"] = {"warnings": ["Soft edges detected."]}
+        first = prepare(data, 0.99)["rows"][0]
+        self.assertIn("Scan quality needs review", first["flags"])
+        self.assertIsNone(first["verified"])

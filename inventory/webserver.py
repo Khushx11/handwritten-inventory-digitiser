@@ -109,7 +109,10 @@ def handler_for(store, classifier=None):
                             raise ValueError(f"{error} {' '.join(quality['warnings'])}") from error
                         raise
                     report["scan_quality"] = quality
-                    sheet_id = store.add(aligned, prepare(report), original=original)
+                    cutoff = getattr(classifier, "review_cutoff", 0.8)
+                    report["quality_gate"] = cutoff > 0.8
+                    report["review_cutoff"] = cutoff
+                    sheet_id = store.add(aligned, prepare(report, cutoff), original=original)
                     self.json(self.report(sheet_id, store.get(sheet_id)), HTTPStatus.CREATED)
                 elif (match := SHEET.fullmatch(self.path)) and match[2] == "review":
                     report = store.update(match[1], data["row"], data.get("sku"), data.get("quantity"),

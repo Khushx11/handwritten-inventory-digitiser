@@ -31,6 +31,8 @@ class PortableMLP:
 class CrossCheckedMLP(PortableMLP):
     """Keep the primary reading and expose independent model disagreement."""
 
+    review_cutoff = 0.99
+
     def __init__(self, primary, comparison):
         super().__init__(primary)
         self.comparison = PortableMLP(comparison)

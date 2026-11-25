@@ -170,7 +170,12 @@ function inspect() {
   if (!row) return;
   $('selected').textContent = `Review row ${row.id} · OCR ${row.sku.raw || '—'} / ${row.count.raw || row.count.state}`;
   $('sku').value = row.verified?.sku ?? (row.sku.model_disagreement ? '' : row.sku.raw);
-  $('quantity').value = row.verified?.quantity ?? (row.count.model_disagreement ? '' : row.count.raw);
+  const strict = current.report.quality_gate;
+  const uncertainCount = row.count.model_disagreement || (strict && (
+    row.count.confidence < current.report.review_cutoff ||
+    current.report.scan_quality.warnings.length > 0
+  ));
+  $('quantity').value = row.verified?.quantity ?? (uncertainCount ? '' : row.count.raw);
   const differences = [
     ['SKU', row.sku], ['Quantity', row.count],
   ].filter(([, field]) => field.model_disagreement);

@@ -6,6 +6,7 @@ from pathlib import Path
 from time import perf_counter
 
 from .fixtures import LAYOUTS, sheet
+from .image_quality import assess
 from .matching import distance
 from .pipeline import extract
 from .recognise import model
@@ -28,13 +29,16 @@ def evaluate():
             "thresholds":list(CUTOFFS),"rows":records,"summary":summarise(records)}
 
 
-def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=None, classifier=None):
+def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=None, classifier=None, quality_gate=False):
     records = []
     start = perf_counter()
     try:
         _, result = extract(image, strategy, classifier=classifier)
     except ValueError:
         result = {"rows": [], "catalogue": {"items": {}}}
+    if quality_gate:
+        result["scan_quality"] = assess(image)
+        result["quality_gate"] = True
     duration = (perf_counter()-start)*1000
     observed = result["rows"]
     _, _, left, middle, right, top, step = LAYOUTS[layout]

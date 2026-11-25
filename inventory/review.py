@@ -10,6 +10,8 @@ def prepare(report, cutoff=0.80):
     repeated = Counter(row["sku"]["raw"] for row in report["rows"] if row["sku"]["raw"] in items)
     for row in report["rows"]:
         row["flags"] = reasons(row, items, cutoff)
+        if report.get("quality_gate") and report.get("scan_quality", {}).get("warnings"):
+            row["flags"].append("Scan quality needs review")
         if repeated[row["sku"]["raw"]] > 1:
             row["flags"].append("Repeated SKU")
         row["verified"] = None
