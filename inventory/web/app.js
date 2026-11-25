@@ -99,10 +99,14 @@ function display() {
   $('download-json').href = base() + '/json';
   $('download-csv').href = base() + '/csv';
   const {unresolved, approved_sum, stated_total, difference} = reconciliation;
-  const sum = stated_total === null ? 'Printed total unreadable or absent' : `OCR printed total ${stated_total}`;
+  const sum = stated_total === null ? 'Printed total unconfirmed' : `${reconciliation.total_source === 'reviewed' ? 'Confirmed' : 'OCR'} total ${stated_total}`;
+  $('total').value = report.verified_total ?? report.total.raw;
   const diff = difference === null ? '' : ` · Difference ${difference}`;
   $('stats').textContent = `${unresolved} unresolved · Approved sum ${approved_sum} · ${sum}${diff}`;
   $('history').replaceChildren(...report.history.map(event => {
+    if (event.action === 'confirm-total') {
+      return node('li', `Printed total confirmed as ${event.after} · ${event.time}`);
+    }
     const value = event.after ? `${event.after.sku}, ${event.after.quantity}` : 'unresolved';
     return node('li', `Row ${event.row} · ${event.action} · ${value} · ${event.time}`);
   }));
@@ -133,7 +137,8 @@ function drawSources(row) {
   const source = $('sheet');
   $('overlay').replaceChildren();
   $('crops').replaceChildren();
-  if (!row || !source.naturalWidth) return;
+  $('source-cells').hidden = !row || !source.naturalWidth;
+  if ($('source-cells').hidden) return;
   row.boxes.forEach(([left, top, right, bottom], index) => {
     const width = right-left, height = bottom-top;
     const mark = node('span');
@@ -196,6 +201,23 @@ $('review').addEventListener('submit', event => {
   change('approve');
 });
 $('reopen').addEventListener('click', () => change('reopen'));
+$('total-form').addEventListener('submit', async event => {
+  event.preventDefault();
+  const button = event.submitter;
+  button.disabled = true;
+  try {
+    current = await post(base() + '/review', {
+      row: null, revision: current.report.revision ?? 0,
+      quantity: $('total').value.trim(), action: 'confirm-total',
+    });
+    display();
+    $('status').textContent = 'Printed total confirmed.';
+  } catch (error) {
+    $('status').textContent = error.message;
+  } finally {
+    button.disabled = false;
+  }
+});
 const recent = localStorage.getItem('stocktake-sheet');
 if (recent && /^[a-f0-9]{32}$/.test(recent)) {
   api('/api/sheets/' + recent).then(result => {

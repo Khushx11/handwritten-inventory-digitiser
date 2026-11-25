@@ -28,13 +28,19 @@
     <section id="workspace" hidden>
       <div class="panel toolbar">
         <div id="stats"></div>
+        <form id="total-form" class="edits">
+          <label>Printed total<input id="total" inputmode="numeric" pattern="[0-9]{1,8}" required></label>
+          <button type="submit">Confirm total</button>
+        </form>
         <div><a id="original" target="_blank" rel="noopener">Original scan</a> <a id="download-json">Export JSON</a> <a id="download-csv">Export CSV</a></div>
       </div>
       <div class="workspace">
         <section class="panel source" aria-label="Source sheet">
           <h2>Aligned source</h2>
+          <div id="source-cells" hidden>
+            <h3>Selected source cells</h3><div id="crops" class="crops"></div>
+          </div>
           <div class="sheet"><img id="sheet" alt="Aligned stocktake sheet"><div id="overlay"></div></div>
-          <h3>Selected source cells</h3><div id="crops" class="crops"></div>
         </section>
         <section class="panel" aria-label="Review queue">
           <div class="toolbar"><h2>Review queue</h2><label><input type="checkbox" id="flagged"> Flagged only</label></div>
