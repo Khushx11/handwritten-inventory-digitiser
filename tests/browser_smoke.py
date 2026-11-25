@@ -67,6 +67,10 @@ def run(url, record):
         page.reload()
         expect(page.get_by_text("5 unresolved", exact=False)).to_be_visible()
         expect(page.get_by_text("Confirmed total 80", exact=False)).to_be_visible()
+        if not record:
+            page.get_by_label("Example condition").select_option("heavy-blur")
+            page.get_by_role("button", name="Load labelled example").click()
+            expect(page.get_by_text("Soft edges detected.", exact=False)).to_be_visible(timeout=20_000)
         video = page.video
         context.close()
         if record and video:

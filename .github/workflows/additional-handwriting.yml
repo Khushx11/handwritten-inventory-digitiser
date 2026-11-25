@@ -37,9 +37,20 @@ jobs:
         run: |
           python -m inventory.writer_benchmark runtime/uji-pen.zip --model runtime/handwriting-mlp.npz \
             --output runtime/writer-metrics.json
+      - name: Evaluate degradation training on the paired stress set
+        run: |
+          python -m inventory.extra_training --mnist runtime/mnist.npz --pendigits runtime/pendigits.zip \
+            --robust --output runtime/robust-digit-metrics.json --weights runtime/handwriting-robust.npz
+          python -m inventory.writer_benchmark runtime/uji-pen.zip --model runtime/handwriting-mlp.npz \
+            --extended-stress --output runtime/stress-standard-model.json
+          python -m inventory.writer_benchmark runtime/uji-pen.zip --model runtime/handwriting-robust.npz \
+            --extended-stress --output runtime/stress-augmented-model.json
       - uses: actions/upload-artifact@v4
         with:
           name: additional-handwriting-metrics
           path: |
             runtime/digit-metrics.json
             runtime/writer-metrics.json
+            runtime/robust-digit-metrics.json
+            runtime/stress-standard-model.json
+            runtime/stress-augmented-model.json
