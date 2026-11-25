@@ -30,7 +30,18 @@ def approve(report, row, sku, quantity):
 def reconcile(report):
     counts = [row["verified"]["quantity"] for row in report["rows"] if row["verified"]]
     total = report["total"]
-    stated = int(total["raw"]) if total["state"] == "recognised" and total["confidence"] >= 0.80 else None
+    confirmed = report.get("verified_total")
+    stated = confirmed if confirmed is not None else (
+        int(total["raw"]) if total["state"] == "recognised" and total["confidence"] >= 0.80 else None
+    )
     unresolved = len(report["rows"]) - len(counts)
     return {"approved_sum": sum(counts), "unresolved": unresolved, "stated_total": stated,
+            "total_source": "reviewed" if confirmed is not None else "ocr" if stated is not None else None,
             "difference": sum(counts) - stated if not unresolved and stated is not None else None}
+
+
+
+def confirm_total(report, text):
+    if not isinstance(text, str) or not re.fullmatch(r"[0-9]{1,8}", text):
+        raise ValueError("Enter the printed total as a whole number of up to eight digits.")
+    report["verified_total"] = int(text)

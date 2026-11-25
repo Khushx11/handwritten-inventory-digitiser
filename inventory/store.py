@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
-from .review import approve
+from .review import approve, confirm_total
 
 
 class Store:
@@ -63,18 +63,24 @@ class Store:
             report = self.read(connection, sheet)
             if revision != report.get("revision", 0):
                 raise ValueError("This sheet changed. Reload before making another edit.")
-            row = next((row for row in report["rows"] if row["id"] == row_id), None)
-            if row is None:
-                raise KeyError("Row not found.")
-            before = row["verified"]
-            if action == "reopen":
-                row["verified"] = None
-            elif action == "approve":
-                approve(report, row, sku, quantity)
+            if action == "confirm-total":
+                before = report.get("verified_total")
+                confirm_total(report, quantity)
+                after = report["verified_total"]
             else:
-                raise ValueError("Unknown review action.")
+                row = next((row for row in report["rows"] if row["id"] == row_id), None)
+                if row is None:
+                    raise KeyError("Row not found.")
+                before = row["verified"]
+                if action == "reopen":
+                    row["verified"] = None
+                elif action == "approve":
+                    approve(report, row, sku, quantity)
+                else:
+                    raise ValueError("Unknown review action.")
+                after = row["verified"]
             report["revision"] = revision + 1
-            event = {"row": row_id, "action": action, "before": before, "after": row["verified"],
+            event = {"row": row_id, "action": action, "before": before, "after": after,
                      "time": datetime.now(timezone.utc).isoformat()}
             connection.execute("UPDATE sheets SET report = ? WHERE id = ?", (json.dumps(report), sheet))
             connection.execute("INSERT INTO history (sheet, event) VALUES (?, ?)", (sheet, json.dumps(event)))
