@@ -1,3 +1,4 @@
+from contextlib import contextmanager
 import json
 import sqlite3
 from datetime import datetime, timezone
@@ -17,8 +18,14 @@ class Store:
             connection.execute("""CREATE TABLE IF NOT EXISTS history
                                (sequence INTEGER PRIMARY KEY, sheet TEXT, event TEXT NOT NULL)""")
 
+    @contextmanager
     def connect(self):
-        return sqlite3.connect(self.db, timeout=10)
+        connection = sqlite3.connect(self.db, timeout=10)
+        try:
+            with connection:
+                yield connection
+        finally:
+            connection.close()
 
     def add(self, image, report, *, original=None):
         sheet = uuid4().hex
