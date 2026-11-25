@@ -23,39 +23,45 @@ def evaluate():
                 for layout in layouts:
                     for offset, stress in enumerate((None, "blur", "shadow", "skew", "crossed-out")):
                         image, expected = sheet(seed_start+offset, style, layout, stress)
-                        start = perf_counter()
-                        try:
-                            _, result = extract(image, strategy)
-                        except ValueError:
-                            result = {"rows": [], "catalogue": {"items": {}}}
-                        duration = (perf_counter()-start)*1000
-                        observed = result["rows"]
-                        _, _, left, middle, right, top, step = LAYOUTS[layout]
-                        row_flags = {cutoff: [row["flags"] for row in prepare(result, cutoff)["rows"]]
-                                     for cutoff in CUTOFFS}
-                        for index, truth in enumerate(expected["rows"]):
-                            row = observed[index] if index < len(observed) else None
-                            sku = row["sku"]["raw"] if row else ""
-                            qty = row["count"]["raw"] if row else ""
-                            qty_ok = qty == truth["quantity"] and (truth["quantity"] != "" or bool(row and row["count"]["state"] == "blank"))
-                            flags = {cutoff: row_flags[cutoff][index] if row else ["No matching row"]
-                                     for cutoff in CUTOFFS}
-                            accepted = [cutoff for cutoff, reasons in flags.items() if not reasons]
-                            expected_y = top + (index + 1.5)*step
-                            aligned = bool(row and all(
-                                abs((box[1]+box[3])/2-expected_y) <= step/4
-                                and bounds[0] < (box[0]+box[2])/2 < bounds[1]
-                                for box, bounds in zip(row["boxes"], ((left, middle), (middle, right)))
-                            ))
-                            records.append({"strategy":strategy,"split":split,"condition":expected["stress"],
-                                            "style":style,"layout":layout,"sheet_seed":seed_start+offset,"row":index+1,
-                                            "aligned":aligned,
-                                            "sku_exact":sku==truth["sku"],"quantity_exact":qty_ok,
-                                            "crossed_out":truth["crossed_out"],"policy_safe":qty_ok and not truth["crossed_out"],
-                                            "accepted_at":accepted,"reviewed_cells_at":{str(cutoff): 0 if not issues else 2 for cutoff,issues in flags.items()},"character_errors":distance(sku,truth["sku"])+distance(qty,truth["quantity"]),
-                                            "characters":len(truth["sku"])+len(truth["quantity"]),"sheet_ms":round(duration,3)})
+                        records.extend(measure_sheet(image, expected, strategy, split, style, layout, seed_start+offset))
     return {"dataset":"Synthetic procedural strokes and layouts; no real writer identities or inventory records.",
             "thresholds":list(CUTOFFS),"rows":records,"summary":summarise(records)}
+
+
+def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=None):
+    records = []
+    start = perf_counter()
+    try:
+        _, result = extract(image, strategy)
+    except ValueError:
+        result = {"rows": [], "catalogue": {"items": {}}}
+    duration = (perf_counter()-start)*1000
+    observed = result["rows"]
+    _, _, left, middle, right, top, step = LAYOUTS[layout]
+    row_flags = {cutoff: [row["flags"] for row in prepare(result, cutoff)["rows"]]
+                 for cutoff in CUTOFFS}
+    for index, truth in enumerate(expected["rows"]):
+        row = observed[index] if index < len(observed) else None
+        sku = row["sku"]["raw"] if row else ""
+        qty = row["count"]["raw"] if row else ""
+        qty_ok = qty == truth["quantity"] and (truth["quantity"] != "" or bool(row and row["count"]["state"] == "blank"))
+        flags = {cutoff: row_flags[cutoff][index] if row else ["No matching row"]
+                 for cutoff in CUTOFFS}
+        accepted = [cutoff for cutoff, reasons in flags.items() if not reasons]
+        expected_y = top + (index + 1.5)*step
+        aligned = bool(row and all(
+            abs((box[1]+box[3])/2-expected_y) <= step/4
+            and bounds[0] < (box[0]+box[2])/2 < bounds[1]
+            for box, bounds in zip(row["boxes"], ((left, middle), (middle, right)))
+        ))
+        records.append({"strategy":strategy,"split":split,"condition":expected["stress"],
+                        "style":style,"writer":writer,"layout":layout,"sheet_seed":seed,"row":index+1,
+                        "aligned":aligned,
+                        "sku_exact":sku==truth["sku"],"quantity_exact":qty_ok,
+                        "crossed_out":truth["crossed_out"],"policy_safe":qty_ok and not truth["crossed_out"],
+                        "accepted_at":accepted,"reviewed_cells_at":{str(cutoff): 0 if not issues else 2 for cutoff,issues in flags.items()},"character_errors":distance(sku,truth["sku"])+distance(qty,truth["quantity"]),
+                        "characters":len(truth["sku"])+len(truth["quantity"]),"sheet_ms":round(duration,3)})
+    return records
 
 
 def summarise(records):

@@ -20,7 +20,7 @@ STROKES = {
 LAYOUTS = [(700,650,54,270,648,62,66), (760,680,68,342,691,77,62), (720,650,40,315,681,74,60)]
 
 
-def sheet(seed=1, style=0, layout=0, stress=None):
+def sheet(seed=1, style=0, layout=0, stress=None, digit_renderer=None):
     rng = random.Random(seed)
     width, height, left, middle, right, top, step = LAYOUTS[layout]
     image = Image.new("RGB", (width, height), "#fdfcf8")
@@ -44,6 +44,10 @@ def sheet(seed=1, style=0, layout=0, stress=None):
         start = x
         slant = (-0.18, 0.11, 0.26, -0.08)[style]
         for digit in text:
+            if digit_renderer is not None:
+                digit_renderer(draw, digit, x, y, rng)
+                x += 38
+                continue
             for stroke in STROKES[digit]:
                 points = [(round(x+2*(a+b*slant)+rng.uniform(-0.7,0.7)),
                            round(y+1.38*b+rng.uniform(-0.9,0.9))) for a,b in stroke]
