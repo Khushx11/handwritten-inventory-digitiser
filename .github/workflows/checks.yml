@@ -33,7 +33,7 @@ jobs:
       - name: Check upload, source crops, correction and export in Chromium
         if: matrix.python == '3.13'
         run: |
-          python -m pip install playwright==1.65.2
+          python -m pip install ".[browser]"
           python -m playwright install --with-deps chromium
           python -m inventory.webserver --workspace /tmp/inventory-browser &
           server=$!

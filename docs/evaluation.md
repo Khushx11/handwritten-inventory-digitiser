@@ -20,3 +20,5 @@ On the separate procedural clean benchmark (24 held-out rows per method), both m
 The plotted points span the fixed threshold grid. The default 0.80 points are labelled with the accepted-row count. Rows are routed as a unit, so the fraction of cells in reviewed rows equals the row review rate.
 
 A row is aligned when both detected cell centres fall in the expected columns and within a quarter of a row height of its expected centre. Character error uses edit distance divided by reference characters. Quantity exact match distinguishes a blank from an unreadable value. The risk calculation treats a crossed-out quantity as requiring review even when digits happen to match. Warm latency excludes model initialisation and HTTP transport.
+
+To regenerate the chart, install the optional plotting dependencies and run `python scripts/plot_review_policy.py`.
