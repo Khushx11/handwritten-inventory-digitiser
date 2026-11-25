@@ -27,7 +27,7 @@ def score(labels, predicted):
     }
 
 
-def run(mnist_path, pen_path, output, weights, robust=False):
+def run(mnist_path, pen_path, output, weights, robust=False, sheet_adapted=False):
     datasets = {"mnist": mnist(mnist_path), "pendigits": pendigits(pen_path)}
     transformed = {
         name: {partition: (features(images), labels) for partition, (images, labels) in data.items()}
@@ -37,7 +37,7 @@ def run(mnist_path, pen_path, output, weights, robust=False):
     x_train = np.concatenate([x for x, _ in train])
     y_train = np.concatenate([y for _, y in train])
     augmented_count = 0
-    if robust:
+    if robust or sheet_adapted:
         augmented = [
             degraded_examples(*datasets[name]["train"], count, seed)
             for name, count, seed in (("mnist", 14000, 41), ("pendigits", 5000, 42))
@@ -45,10 +45,15 @@ def run(mnist_path, pen_path, output, weights, robust=False):
         handwriting = list(training_glyphs())
         augmented.append((features([mask for mask, _ in handwriting]),
                           np.asarray([digit for _, digit in handwriting])))
+        if sheet_adapted:
+            from .sheet_training import sheet_glyphs
+            scan_glyphs = list(sheet_glyphs())
+            augmented.append((features([mask for mask, _ in scan_glyphs]),
+                              np.asarray([digit for _, digit in scan_glyphs])))
         augmented_count = sum(len(y) for _, y in augmented)
         x_train = np.concatenate([x_train, *(x for x, _ in augmented)])
         y_train = np.concatenate([y_train, *(y for _, y in augmented)])
-    classifier = MLPClassifier(hidden_layer_sizes=(128, 64), max_iter=40, early_stopping=not robust,
+    classifier = MLPClassifier(hidden_layer_sizes=(128, 64), max_iter=40, early_stopping=not (robust or sheet_adapted),
                                validation_fraction=0.10, batch_size=256, random_state=42)
     baseline = model()
     with threadpool_limits(limits=4):
@@ -69,10 +74,10 @@ def run(mnist_path, pen_path, output, weights, robust=False):
     report = {
         "model": "MLP 128/64 ReLU, seed 42",
         "training": {
-            "mode": "degradation-augmented" if robust else "standard",
+            "mode": "sheet-adapted" if sheet_adapted else "degradation-augmented" if robust else "standard",
             "augmented_or_domain_rows": augmented_count,
             "total_rows": len(y_train),
-            "validation": "fixed epoch budget" if robust else "training-only early stopping",
+            "validation": "fixed epoch budget" if robust or sheet_adapted else "training-only early stopping",
         },
         "evaluation": "Official held-out test partitions scored separately; no test rows used for fitting.",
         "input_sources": {
@@ -92,5 +97,6 @@ if __name__ == "__main__":
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--weights", required=True, type=Path)
     parser.add_argument("--robust", action="store_true", help="Train with extra degraded training glyphs")
+    parser.add_argument("--sheet-adapted", action="store_true", help="Include simulated scans from development writers")
     args = parser.parse_args()
-    run(args.mnist, args.pendigits, args.output, args.weights, args.robust)
+    run(args.mnist, args.pendigits, args.output, args.weights, args.robust, args.sheet_adapted)
