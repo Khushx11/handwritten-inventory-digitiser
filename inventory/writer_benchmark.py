@@ -59,7 +59,7 @@ def renderer(samples):
     return draw_digit
 
 
-def evaluate_writers(archive, classifier=None, extended=False, quality_gate=False):
+def evaluate_writers(archive, classifier=None, extended=False, quality_gate=False, recover_touching=False):
     digest = hashlib.sha256(archive.read_bytes()).hexdigest()
     if digest != ARCHIVE_SHA256:
         raise ValueError("The UCI archive does not match the evaluated release checksum.")
@@ -79,12 +79,13 @@ def evaluate_writers(archive, classifier=None, extended=False, quality_gate=Fals
                     seed = index * 1000 + (0 if extended else offset)
                     image, truth = sheet(seed, layout=layout, stress=stress, digit_renderer=draw)
                     for strategy in ("page", "cell"):
-                        results.extend(measure_sheet(image, truth, strategy, split, None, layout, seed, writer, classifier, quality_gate))
+                        results.extend(measure_sheet(image, truth, strategy, split, None, layout, seed, writer, classifier, quality_gate, recover_touching))
     return {
         "dataset": "UCI UJI Pen Characters (V1) digit strokes composited onto synthetic sheets.",
         "archive_sha256": digest,
         "source": ARCHIVE_URL,
         "scan_quality_gate": quality_gate,
+        "touching_digit_recovery": recover_touching,
         "thresholds": list(CUTOFFS),
         "rows": results,
         "summary": summarise(results),
@@ -99,6 +100,7 @@ if __name__ == "__main__":
     parser.add_argument("--extended-stress", action="store_true")
     parser.add_argument("--comparison-model", type=Path, help="Optional second checkpoint for disagreement review")
     parser.add_argument("--gate-scan-quality", action="store_true")
+    parser.add_argument("--recover-touching", action="store_true")
     args = parser.parse_args()
     from .portable_model import CrossCheckedMLP, PortableMLP
     if args.comparison_model and not args.model:
@@ -108,4 +110,4 @@ if __name__ == "__main__":
         classifier = CrossCheckedMLP(args.model, args.comparison_model)
     elif args.model:
         classifier = PortableMLP(args.model)
-    args.output.write_text(json.dumps(evaluate_writers(args.archive, classifier, args.extended_stress, args.gate_scan_quality), indent=2, allow_nan=False) + "\n")
+    args.output.write_text(json.dumps(evaluate_writers(args.archive, classifier, args.extended_stress, args.gate_scan_quality, args.recover_touching), indent=2, allow_nan=False) + "\n")

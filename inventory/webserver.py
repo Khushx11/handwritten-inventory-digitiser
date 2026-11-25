@@ -131,7 +131,10 @@ def handler_for(store, classifier=None):
                     working = working.rotate(rotation, expand=True) if rotation else working
                     quality = assess(working)
                     try:
-                        aligned, report = extract(working, data.get("strategy", "cell"), classifier=classifier)
+                        aligned, report = extract(
+                            working, data.get("strategy", "cell"), classifier=classifier,
+                            recover_touching=getattr(classifier, "review_cutoff", 0.8) > 0.8,
+                        )
                     except ValueError as error:
                         if quality["warnings"]:
                             raise ValueError(f"{error} {' '.join(quality['warnings'])}") from error

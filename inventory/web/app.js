@@ -173,7 +173,7 @@ function inspect() {
   $('review').hidden = !row;
   if (!row) return;
   $('selected').textContent = `Review row ${row.id} · OCR ${row.sku.raw || '—'} / ${row.count.raw || row.count.state}`;
-  $('sku').value = row.verified?.sku ?? (row.sku.model_disagreement ? '' : row.sku.raw);
+  $('sku').value = row.verified?.sku ?? (row.sku.model_disagreement || row.sku.segmentation_suggestion ? '' : row.sku.raw);
   const strict = current.report.quality_gate;
   const uncertainCount = row.count.model_disagreement || (strict && (
     row.count.confidence < current.report.review_cutoff ||
@@ -183,9 +183,13 @@ function inspect() {
   const differences = [
     ['SKU', row.sku], ['Quantity', row.count],
   ].filter(([, field]) => field.model_disagreement);
-  $('model-comparison').textContent = differences.map(([label, field]) =>
+  const notes = differences.map(([label, field]) =>
     `${label}: primary read ${field.raw}, comparison read ${field.comparison_raw}. Check the source crop.`
-  ).join(' ');
+  );
+  if (row.sku.segmentation_suggestion) {
+    notes.push(`Touching-digit SKU suggestion: ${row.sku.segmentation_suggestion}. Verify each digit from the source crop.`);
+  }
+  $('model-comparison').textContent = notes.join(' ');
   $('reopen').disabled = !row.verified && !row.exclusion_reason;
   $('exclusion-reason').value = row.exclusion_reason ?? '';
   $('suggestions').replaceChildren(...row.suggestions.map(sku => {

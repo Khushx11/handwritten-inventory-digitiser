@@ -29,11 +29,11 @@ def evaluate():
             "thresholds":list(CUTOFFS),"rows":records,"summary":summarise(records)}
 
 
-def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=None, classifier=None, quality_gate=False):
+def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=None, classifier=None, quality_gate=False, recover_touching=False):
     records = []
     start = perf_counter()
     try:
-        _, result = extract(image, strategy, classifier=classifier)
+        _, result = extract(image, strategy, classifier=classifier, recover_touching=recover_touching)
     except ValueError:
         result = {"rows": [], "catalogue": {"items": {}}}
     if quality_gate:
@@ -77,6 +77,8 @@ def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=
         target_qty = truth["quantity"] if truth else ""
         aligned = truth is not None and row is not None
         sku_ok = aligned and sku == target_sku
+        suggestion = row["sku"].get("segmentation_suggestion") if row else None
+        assisted_sku_ok = aligned and (suggestion or sku) == target_sku
         qty_ok = aligned and qty == target_qty and (target_qty != "" or row["count"]["state"] == "blank")
         # An extra detection can be accepted by the live policy. Count that as an error.
         accepted = [cutoff for cutoff in CUTOFFS if row is not None and not row_flags[cutoff][detected]]
@@ -86,6 +88,8 @@ def measure_sheet(image, expected, strategy, split, style, layout, seed, writer=
             "detected_row": detected + 1 if detected is not None else None,
             "alignment": "matched" if aligned else "extra" if row else "missing",
             "aligned": aligned, "sku_exact": sku_ok, "quantity_exact": qty_ok,
+            "sku_suggestion": suggestion, "suggestion_exact": bool(suggestion and suggestion == target_sku),
+            "assisted_row_exact": assisted_sku_ok and qty_ok,
             "crossed_out": crossed_out, "policy_safe": qty_ok and not crossed_out,
             "accepted_at": accepted,
             "reviewed_cells_at": {str(cutoff): 0 if cutoff in accepted else 2 for cutoff in CUTOFFS},
@@ -121,6 +125,9 @@ def summarise(records):
                         "exact_sku_rate":sum(row["sku_exact"] for row in rows)/n,
                         "exact_quantity_rate":sum(row["quantity_exact"] for row in rows)/n,
                         "exact_row_rate":sum(row["sku_exact"] and row["quantity_exact"] for row in rows)/n,
+                        "rows_with_suggestions":sum(bool(row["sku_suggestion"]) for row in rows),
+                        "correct_suggestions":sum(row["suggestion_exact"] for row in rows),
+                        "row_accuracy_if_suggestions_used":sum(row["assisted_row_exact"] for row in rows)/n,
                         "row_alignment_rate":sum(row["aligned"] for row in rows)/n,
                         "mean_sheet_ms":sum(sheet_times.values())/len(sheet_times),"risk_coverage":risks})
     return summary
