@@ -169,8 +169,14 @@ function inspect() {
   $('review').hidden = !row;
   if (!row) return;
   $('selected').textContent = `Review row ${row.id} · OCR ${row.sku.raw || '—'} / ${row.count.raw || row.count.state}`;
-  $('sku').value = row.verified?.sku ?? row.sku.raw;
-  $('quantity').value = row.verified?.quantity ?? row.count.raw;
+  $('sku').value = row.verified?.sku ?? (row.sku.model_disagreement ? '' : row.sku.raw);
+  $('quantity').value = row.verified?.quantity ?? (row.count.model_disagreement ? '' : row.count.raw);
+  const differences = [
+    ['SKU', row.sku], ['Quantity', row.count],
+  ].filter(([, field]) => field.model_disagreement);
+  $('model-comparison').textContent = differences.map(([label, field]) =>
+    `${label}: primary read ${field.raw}, comparison read ${field.comparison_raw}. Check the source crop.`
+  ).join(' ');
   $('reopen').disabled = !row.verified;
   $('suggestions').replaceChildren(...row.suggestions.map(sku => {
     const button = node('button', `Use ${sku} · ${current.report.catalogue.items[sku]}`);

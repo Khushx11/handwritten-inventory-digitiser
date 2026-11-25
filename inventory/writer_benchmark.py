@@ -96,7 +96,14 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--model", type=Path, help="Optional numeric MLP weights")
     parser.add_argument("--extended-stress", action="store_true")
+    parser.add_argument("--comparison-model", type=Path, help="Optional second checkpoint for disagreement review")
     args = parser.parse_args()
-    from .portable_model import PortableMLP
-    classifier = PortableMLP(args.model) if args.model else None
+    from .portable_model import CrossCheckedMLP, PortableMLP
+    if args.comparison_model and not args.model:
+        parser.error("--comparison-model requires --model")
+    classifier = None
+    if args.comparison_model:
+        classifier = CrossCheckedMLP(args.model, args.comparison_model)
+    elif args.model:
+        classifier = PortableMLP(args.model)
     args.output.write_text(json.dumps(evaluate_writers(args.archive, classifier, args.extended_stress), indent=2, allow_nan=False) + "\n")

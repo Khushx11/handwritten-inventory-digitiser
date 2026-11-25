@@ -34,6 +34,8 @@ def reasons(row, items, cutoff):
         result.append("Unknown or ambiguous SKU")
     for key, name in (("sku", "SKU"), ("count", "Quantity")):
         field = row[key]
+        if field.get("model_disagreement"):
+            result.append(f"{name} model disagreement")
         if field["state"] != "recognised":
             result.append(f"{name} {field['state']}")
         elif field["confidence"] < cutoff:

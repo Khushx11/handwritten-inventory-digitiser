@@ -68,11 +68,19 @@ def recognise(parts, *, width, expected=None, classifier=None):
                              for left, top, right, bottom, _ in parts):
         return {"raw": "", "confidence": 0.0, "state": "unreadable"}
     classifier = classifier or model()
-    probabilities = classifier.predict_proba([glyph(part[-1]) for part in parts])
+    features = [glyph(part[-1]) for part in parts]
+    probabilities = classifier.predict_proba(features)
     raw = "".join(str(digit) for digit in classifier.classes_[probabilities.argmax(axis=1)])
     confidence = float(probabilities.max(axis=1).min())
     state = "unreadable" if expected and len(raw) != expected else "recognised"
-    return {"raw": raw, "confidence": round(confidence, 5), "state": state}
+    result = {"raw": raw, "confidence": round(confidence, 5), "state": state}
+    if hasattr(classifier, "cross_check"):
+        other = classifier.cross_check(features)
+        alternative = "".join(str(digit) for digit in classifier.classes_[other.argmax(axis=1)])
+        result["comparison_raw"] = alternative
+        result["model_disagreement"] = raw != alternative
+        result["confidence"] = round(min(confidence, float(other.max(axis=1).min())), 5)
+    return result
 
 
 def cell(image, box, expected=None, classifier=None):

@@ -26,3 +26,14 @@ class PortableMLP:
                 value = np.maximum(value, 0)
         result = np.exp(value - value.max(axis=1, keepdims=True))
         return result / result.sum(axis=1, keepdims=True)
+
+
+class CrossCheckedMLP(PortableMLP):
+    """Keep the primary reading and expose independent model disagreement."""
+
+    def __init__(self, primary, comparison):
+        super().__init__(primary)
+        self.comparison = PortableMLP(comparison)
+
+    def cross_check(self, features):
+        return self.comparison.predict_proba(features)

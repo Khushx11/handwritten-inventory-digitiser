@@ -128,9 +128,16 @@ def main():
     parser.add_argument("--port", type=int, default=8010)
     parser.add_argument("--workspace", type=Path, default=Path("runtime"))
     parser.add_argument("--model", type=Path, help="Optional locally trained numeric MLP weights")
+    parser.add_argument("--comparison-model", type=Path, help="Optional second checkpoint for disagreement review")
     args = parser.parse_args()
-    from .portable_model import PortableMLP
-    classifier = PortableMLP(args.model) if args.model else None
+    from .portable_model import CrossCheckedMLP, PortableMLP
+    if args.comparison_model and not args.model:
+        parser.error("--comparison-model requires --model")
+    classifier = None
+    if args.comparison_model:
+        classifier = CrossCheckedMLP(args.model, args.comparison_model)
+    elif args.model:
+        classifier = PortableMLP(args.model)
     with ThreadingHTTPServer(("127.0.0.1", args.port), handler_for(Store(args.workspace), classifier)) as server:
         print(f"Open http://127.0.0.1:{server.server_port}", flush=True)
         try:
