@@ -20,15 +20,19 @@ class Store:
     def connect(self):
         return sqlite3.connect(self.db, timeout=10)
 
-    def add(self, image, report):
+    def add(self, image, report, *, original=None):
         sheet = uuid4().hex
         target = self.directory / (sheet + ".png")
-        image.save(target)
+        source = self.directory / (sheet + "-original.png")
         try:
+            image.save(target)
+            if original is not None:
+                original.save(source)
             with self.connect() as connection:
                 connection.execute("INSERT INTO sheets VALUES (?, ?)", (sheet, json.dumps(report)))
         except Exception:
             target.unlink(missing_ok=True)
+            source.unlink(missing_ok=True)
             raise
         return sheet
 
