@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from time import perf_counter
 
-from .fixtures import sheet
+from .fixtures import LAYOUTS, sheet
 from .matching import distance
 from .pipeline import extract
 from .recognise import model
@@ -30,21 +30,29 @@ def evaluate():
                             result = {"rows": [], "catalogue": {"items": {}}}
                         duration = (perf_counter()-start)*1000
                         observed = result["rows"]
+                        _, _, left, middle, right, top, step = LAYOUTS[layout]
+                        row_flags = {cutoff: [row["flags"] for row in prepare(result, cutoff)["rows"]]
+                                     for cutoff in CUTOFFS}
                         for index, truth in enumerate(expected["rows"]):
                             row = observed[index] if index < len(observed) else None
                             sku = row["sku"]["raw"] if row else ""
                             qty = row["count"]["raw"] if row else ""
                             qty_ok = qty == truth["quantity"] and (truth["quantity"] != "" or bool(row and row["count"]["state"] == "blank"))
-                            accepted = []
-                            for cutoff in CUTOFFS:
-                                if row and not prepare(result, cutoff)["rows"][index]["flags"]:
-                                    accepted.append(cutoff)
+                            flags = {cutoff: row_flags[cutoff][index] if row else ["No matching row"]
+                                     for cutoff in CUTOFFS}
+                            accepted = [cutoff for cutoff, reasons in flags.items() if not reasons]
+                            expected_y = top + (index + 1.5)*step
+                            aligned = bool(row and all(
+                                abs((box[1]+box[3])/2-expected_y) <= step/4
+                                and bounds[0] < (box[0]+box[2])/2 < bounds[1]
+                                for box, bounds in zip(row["boxes"], ((left, middle), (middle, right)))
+                            ))
                             records.append({"strategy":strategy,"split":split,"condition":expected["stress"],
                                             "style":style,"layout":layout,"sheet_seed":seed_start+offset,"row":index+1,
-                                            "aligned":len(observed)==len(expected["rows"]),
+                                            "aligned":aligned,
                                             "sku_exact":sku==truth["sku"],"quantity_exact":qty_ok,
                                             "crossed_out":truth["crossed_out"],"policy_safe":qty_ok and not truth["crossed_out"],
-                                            "accepted_at":accepted,"character_errors":distance(sku,truth["sku"])+distance(qty,truth["quantity"]),
+                                            "accepted_at":accepted,"reviewed_cells_at":{str(cutoff): 0 if not issues else 2 for cutoff,issues in flags.items()},"character_errors":distance(sku,truth["sku"])+distance(qty,truth["quantity"]),
                                             "characters":len(truth["sku"])+len(truth["quantity"]),"sheet_ms":round(duration,3)})
     return {"dataset":"Synthetic procedural strokes and layouts; no real writer identities or inventory records.",
             "thresholds":list(CUTOFFS),"rows":records,"summary":summarise(records)}
@@ -64,6 +72,7 @@ def summarise(records):
             errors = sum(not (row["sku_exact"] and row["policy_safe"]) for row in accepted)
             risks.append({"threshold":cutoff,"accepted":len(accepted),"review_rate":1-len(accepted)/n,
                           "accepted_row_error":errors/len(accepted) if accepted else None,
+                          "cell_review_rate":sum(r["reviewed_cells_at"][str(cutoff)] for r in rows)/(2*n),
                           "wrong_quantities_accepted":wrong_quantity})
         summary.append({"strategy":strategy,"split":split,"condition":condition,"rows":n,
                         "character_error_rate":sum(row["character_errors"] for row in rows)/sum(row["characters"] for row in rows),
